@@ -7,216 +7,139 @@
 
 {% block content %}
 
-     <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-               <h1 class="govuk-heading-xl">
-                    Bookmarked apprenticeships and training providers
-                    <span class="govuk-caption-xl bookmarked-numbers">
-                         <div><span class="apprenticeship-number number">0</span> Apprenticeships</div>
-                         <span class="separator"></span>
-                         <div><span class="provider-number number">0</span> Training provider(s)</div>
-                    </span>
-               </h1>
-          </div>
-          <div class="govuk-grid-column-one-third">
-               <div class="cta-component">
-                    <h2 class="govuk-heading-s">Save your choices and create your gov.uk account to start hiring the future</h2>
-                    <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start">Hire an apprentice</a>
-               </div>
-          </div>
+<div class="govuk-grid-row">
+     <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-xl">
+               Employers favourites
+          </h1>
      </div>
-     <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
+</div>
 
-               <!-- <hr class="no-top-margin"> -->
+<div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-l" id="sprint-0">
+               <span class="govuk-tag">LATEST</span><br>
+                    Employer GOV.UK journey
+               <span class="govuk-caption-l">20th March 2019 — 2nd April 2019</span>
+          </h2>
 
-               <ol class="app-task-list">
+          <h3 class="govuk-heading-m" id="employer-journeys">
+               Prototype
+          </h3>
 
-                    <!-- ================ BASKET ITEM - 1 - START ================ -->
-                    <li>
-                         <h2 class="app-task-list__section">
-                              <span class="app-task-list__section-number">1. </span> <a href="#">Apprenticeship title 1</a>
-                              <div class="govuk-form-group">
-                                   <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
-                                        <div class="govuk-checkboxes">
-                                             <div class="govuk-checkboxes__item">
-                                                  <input class="govuk-checkboxes__input" id="compare-app-1" name="compare-app-1" type="checkbox" value="carcasses">
-                                                  <label class="govuk-label govuk-checkboxes__label" for="compare-app-1">
-                                                       Compare
-                                                  </label>
-                                             </div>
-                                             <a href="#" class="govuk-delete-link">Delete</a>
-                                        </div>
-                                   </fieldset>
-                              </div>
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-one-half">
+                    <ul class="govuk-list govuk-list--bullet">
+                         <li>
+                              <a href="/favourites-V1/version-1">Version 1</a>
+                         </li>
+                         <li>
+                              <a href="/favourites-V1/version-2">Version 2</a>
+                         </li>
+                    </ul>
+               </div>
+
+               <!-- <div class="govuk-grid-column-one-half">
+                    <h4 class="govuk-heading-s">Provider journeys (v1)</h4>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                         <li>
+                              <b><a href="sprint-08/research/provider-v1/account-home?funding-restrictions=">Default (no restrictions)</a></b>
+                         </li>
+                         <li>
+                              <a href="sprint-08/research/provider-v1/account-home?funding-restrictions=current-restriction">Funding restriction in place</a>
+                         </li>
+                         <li>
+                              <a href="sprint-08/research/provider-v1/account-home?funding-restrictions=future-restriction">Upcoming funding restriction</a>
+                         </li>
+                         <li>
+                              <a href="sprint-08/research/provider-v1/account-home?funding-restrictions=number-of-starts">Restricted to 1 reservation</a>
+                         </li>
+                    </ul>
+
+               </div> -->
+
+          </div>
+
+          <!-- <hr class="govuk-section-break govuk-section-break--xl"> -->
+
+          <!-- <h2 class="govuk-heading-l">
+               Previous versions
+          </h2> -->
+
+          <!-- <div class="govuk-accordion" data-module="accordion" id="accordion-default">
+
+               <div class="govuk-accordion__controls">
+                    <button type="button" class="govuk-accordion__open-all" aria-expanded="false">Open all<span class="govuk-visually-hidden"> sections</span></button>
+               </div>
+
+               <div class="govuk-accordion__section">
+                    <div class="govuk-accordion__section-header">
+                         <h2 class="govuk-accordion__section-heading">
+                              <button type="button" id="accordion-default-heading-1" aria-controls="accordion-default-content-1" class="govuk-accordion__section-button" aria-describedby="accordion-default-summary-1" aria-expanded="false">
+                                   Sprint 7
+                              </button>
+                              <span class="govuk-accordion__icon" aria-hidden="true"></span>
                          </h2>
 
+                         <div class="govuk-accordion__section-summary govuk-body" id="accordion-default-summary-1">
+                              11th March—22nd March 2019
+                         </div>
+
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                         <h3 class="govuk-heading-m" id="employer-journeys">Research</h3>
+
                          <div class="govuk-grid-row">
-                              <div class="govuk-grid-column-one-third">
-                                   <p class="new"><span>new</span></p>
-                                   <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
-                                   <p><strong>Typical length:</strong> 18 months</p>
-                              </div>
-                              <div class="govuk-grid-column-two-thirds">
-                                   <h3 class="govuk-heading-s">Your saved training providers</h3>
-                                   <ul class="app-task-list__items">
-                                        <li class="app-task-list__item">
-                                             <a class="app-task-list__task-name" href="#" aria-describedby="training-provider-title-1">
-                                                  Training provider title 1
-                                             </a>
-                                             <div class="govuk-form-group">
-                                                  <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
-                                                       <div class="govuk-checkboxes">
-                                                            <div class="govuk-checkboxes__item">
-                                                                 <input class="govuk-checkboxes__input" id="compare-provider-1" name="compare-provider-1" type="checkbox" value="carcasses">
-                                                                 <label class="govuk-label govuk-checkboxes__label" for="compare-provider-1">
-                                                                      Compare
-                                                                 </label>
-                                                            </div>
-                                                            <a href="#" class="govuk-delete-link">Delete</a>
-                                                       </div>
-                                                  </fieldset>
-                                             </div>
+                              <div class="govuk-grid-column-one-half">
+                                   <h4 class="govuk-heading-s">Employer journeys</h4>
+
+                                   <ul class="govuk-list govuk-list--bullet">
+                                        <li>
+                                             <b><a href="sprint-07/research/employer/account-home?funding-restrictions=">Default (no restrictions)</a></b>
                                         </li>
-                                        <li class="app-task-list__item">
-                                             <a class="app-task-list__task-name" href="#" aria-describedby="training-provider-title-2">
-                                                  Training provider title 2
-                                             </a>
-                                             <div class="govuk-form-group">
-                                                  <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
-                                                       <div class="govuk-checkboxes">
-                                                            <div class="govuk-checkboxes__item">
-                                                                 <input class="govuk-checkboxes__input" id="compare-provider-2" name="compare-provider-2" type="checkbox" value="carcasses">
-                                                                 <label class="govuk-label govuk-checkboxes__label" for="compare-provider-2">
-                                                                      Compare
-                                                                 </label>
-                                                            </div>
-                                                            <a href="#" class="govuk-delete-link">Delete</a>
-                                                       </div>
-                                                  </fieldset>
-                                             </div>
+                                        <li>
+                                             <a href="sprint-07/research/employer/account-home?funding-restrictions=current-restriction">Funding restriction in place</a>
                                         </li>
-                                        <li class="app-task-list__item">
-                                             <a class="app-task-list__task-name" href="#" aria-describedby="training-provider-title-3">
-                                                  Training provider title 3
-                                             </a>
-                                             <div class="govuk-form-group">
-                                                  <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
-                                                       <div class="govuk-checkboxes">
-                                                            <div class="govuk-checkboxes__item">
-                                                                 <input class="govuk-checkboxes__input" id="compare-provider-3" name="compare-provider-3" type="checkbox" value="carcasses">
-                                                                 <label class="govuk-label govuk-checkboxes__label" for="compare-provider-3">
-                                                                      Compare
-                                                                 </label>
-                                                            </div>
-                                                            <a href="#" class="govuk-delete-link">Delete</a>
-                                                       </div>
-                                                  </fieldset>
-                                             </div>
+                                        <li>
+                                             <a href="sprint-07/research/employer/account-home?funding-restrictions=future-restriction">Upcoming funding restriction</a>
                                         </li>
-                                        <li class="app-task-list__item">
-                                             <a class="app-task-list__task-name" href="#" aria-describedby="training-provider-title-4">
-                                                  Training provider title 4
-                                             </a>
-                                             <div class="govuk-form-group">
-                                                  <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
-                                                       <div class="govuk-checkboxes">
-                                                            <div class="govuk-checkboxes__item">
-                                                                 <input class="govuk-checkboxes__input" id="compare-provider-4" name="compare-provider-4" type="checkbox" value="carcasses">
-                                                                 <label class="govuk-label govuk-checkboxes__label" for="compare-provider-4">
-                                                                      Compare
-                                                                 </label>
-                                                            </div>
-                                                            <a href="#" class="govuk-delete-link">Delete</a>
-                                                       </div>
-                                                  </fieldset>
-                                             </div>
-                                        </li>
-                                        <li class="app-task-list__item">
-                                             <a class="app-task-list__task-name" href="#" aria-describedby="training-provider-title-5">
-                                                  Training provider title 5
-                                             </a>
-                                             <div class="govuk-form-group">
-                                                  <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
-                                                       <div class="govuk-checkboxes">
-                                                            <div class="govuk-checkboxes__item">
-                                                                 <input class="govuk-checkboxes__input" id="compare-provider-5" name="compare-provider-5" type="checkbox" value="carcasses">
-                                                                 <label class="govuk-label govuk-checkboxes__label" for="compare-provider-5">
-                                                                      Compare
-                                                                 </label>
-                                                            </div>
-                                                            <a href="#" class="govuk-delete-link">Delete</a>
-                                                       </div>
-                                                  </fieldset>
-                                             </div>
+                                        <li>
+                                             <a href="sprint-07/research/employer/account-home?funding-restrictions=number-of-starts">Restricted to 1 reservation</a>
                                         </li>
                                    </ul>
                               </div>
-                         </div>
-                    </li>
-                    <!-- ================ BASKET ITEM - 1 - END ================ -->
 
-                    <!-- ================ BASKET ITEM - 2 - START ================ -->
-                    <li>
-                         <h2 class="app-task-list__section">
-                              <span class="app-task-list__section-number">2. </span> <a href="#">Apprenticeship title 2</a>
-                              <div class="govuk-form-group">
-                                   <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
-                                        <div class="govuk-checkboxes">
-                                             <div class="govuk-checkboxes__item">
-                                                  <input class="govuk-checkboxes__input" id="compare-app-2" name="compare-app-2" type="checkbox" value="carcasses">
-                                                  <label class="govuk-label govuk-checkboxes__label" for="compare-app-2">
-                                                       Compare
-                                                  </label>
-                                             </div>
-                                             <a href="#" class="govuk-delete-link">Delete</a>
-                                        </div>
-                                   </fieldset>
+                              <div class="govuk-grid-column-one-half">
+                                   <h4 class="govuk-heading-s">Provider journeys (v1)</h4>
+
+                                   <ul class="govuk-list govuk-list--bullet">
+                                        <li>
+                                             <b><a href="sprint-07/research/provider-v1/account-home?funding-restrictions=">Default (no restrictions)</a></b>
+                                        </li>
+                                        <li>
+                                             <a href="sprint-07/research/provider-v1/account-home?funding-restrictions=current-restriction">Funding restriction in place</a>
+                                        </li>
+                                        <li>
+                                             <a href="sprint-07/research/provider-v1/account-home?funding-restrictions=future-restriction">Upcoming funding restriction</a>
+                                        </li>
+                                        <li>
+                                             <a href="sprint-07/research/provider-v1/account-home?funding-restrictions=number-of-starts">Restricted to 1 reservation</a>
+                                        </li>
+                                   </ul>
+
                               </div>
-                         </h2>
-                         <div class="govuk-grid-row">
-                              <div class="govuk-grid-column-one-third">
-                                   <p class="new"><span>new</span></p>
-                                   <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
-                                   <p><strong>Typical length:</strong> 18 months</p>
-                              </div>
-                              <div class="govuk-grid-column-two-thirds">
-                                   <h3 class="govuk-heading-s">Your saved training providers</h3>
-                                   <section class="postcode-search">
-                                        <h4 class="govuk-heading-s">Enter the postcode of where the apprentice will work...</h4>
-                                        <fieldset class="govuk-fieldset">
-                                             <div class="govuk-form-group">
-                                                  <label class="govuk-label" for="provider-list-postcode">
-                                                       Postcode
-                                                  </label>
-                                                  <input class="govuk-input govuk-input--width-10" id="provider-list-postcode" name="provider-list-postcode" type="text">
-                                                  <a id="postcode-search" href="#" class="govuk-button govuk-button--search"><span></span><span class="text">Search</span></a>                                             </div>
-                                        </fieldset>
-                                   </section>
-                              </div>
+
                          </div>
 
-                    </li>
-                    <!-- ================ BASKET ITEM - 2 - END ================ -->
-
-               </ol>
-
-          </div>
-
-     </div>
-
-     <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-
-               <!-- <hr> -->
-
-               <div class="cta-component full-width">
-                    <h2 class="govuk-heading-m">Save your choices and create your gov.uk account to start hiring the future</h2>
-                    <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start">Hire an apprentice</a>
+                    </div>
                </div>
 
-          </div>
+          </div> -->
 
      </div>
+
+</div>
 
 {% endblock %}

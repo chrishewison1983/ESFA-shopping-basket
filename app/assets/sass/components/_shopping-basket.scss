@@ -82,6 +82,10 @@ ol.app-task-list {
                padding-bottom: 0.5em;
                font-size: 1.7rem;
                // margin-bottom: 0;
+               .govuk-button {
+                    float: right;
+                    margin: 0;
+               }
                .app-task-list__section-number {
                     display: inline-block;
                }
@@ -144,7 +148,9 @@ ol.app-task-list {
                top: 11px;
                left: 6px;
                width: 14px;
-               height: 7px; 
+               height: 7px;
+
+
           }
           .postcode-search {
                background: govuk-colour("grey-3");
@@ -175,3 +181,60 @@ ol.app-task-list {
           }
      }
 }
+
+#version-2 {
+     ol.app-task-list {
+          margin-top: 1em;
+          li {
+               border-bottom: 1px solid $govuk-border-colour;
+               margin: 0 0 2em 0;
+               padding: 1em 0 0 0;
+               &:last-of-type {
+                    border-bottom: none;
+               }
+               .app-task-list__section {
+                    border-bottom: none;
+                    margin: 0;
+               }
+               .govuk-form-group {
+                    display: inline-block;
+                    float: left;
+                    clear: both;
+               }
+               .training-provider-content {
+                    text-align: right;
+               }
+          }
+     }
+}
+
+.icon-basket {
+     display: inline-block;
+     width: 2.5em;
+     height: 2.5em;
+     float: left;
+     margin: 0 0.5em 0 0;
+     background: url('../images/basket-full-black.svg') no-repeat;
+     background-size: cover;
+}
+
+.govuk-details {
+     margin-bottom: 10px;
+     .govuk-details__text {
+          display: inline-block;
+     }
+}
+
+.govuk-panel--confirmation {
+     display: none;
+}
+
+.apprenticeship-content {
+     display: none;
+}
+
+// .account-content-wrapper {
+//      background: govuk-colour("grey-4");
+//      margin: 0 -20em;
+//      padding: 0 -20em;
+// }

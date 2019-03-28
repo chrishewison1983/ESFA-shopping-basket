@@ -143,8 +143,10 @@ ol.app-task-list {
           .govuk-checkboxes__input + .govuk-checkboxes__label::after {
                top: 11px;
                left: 6px;
-               width: 14px;
-               height: 7px; 
+               width: 14px; 
+               height: 7px;
+
+
           }
           .postcode-search {
                background: govuk-colour("grey-3");
