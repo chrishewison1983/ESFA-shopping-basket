@@ -55,7 +55,8 @@ $(document).ready(function () {
      }
 
      if ($.cookie("apprenticeship-number") == 1 && $.cookie("delete-apprenticeship") == 'true') {
-          $(".govuk-panel--confirmation").show();
+          $("#delete-apprenticeship-panel").show();
+          $("#delete-training-provider-panel").hide();
           $("ol.app-task-list li").show();
           $("ol.app-task-list li.apprenticeship-one").remove();
 
@@ -64,7 +65,8 @@ $(document).ready(function () {
      }
 
      if ($.cookie("apprenticeship-number") == 2 && $.cookie("delete-apprenticeship") == 'true') {
-          $(".govuk-panel--confirmation").show();
+          $("#delete-apprenticeship-panel").show();
+          $("#delete-training-provider-panel").hide();
           $("ol.app-task-list li").show();
           $("ol.app-task-list li.apprenticeship-two").remove();
 
@@ -94,7 +96,8 @@ $(document).ready(function () {
      }
 
      if ($.cookie("delete-provider") == 'true') {
-          $(".govuk-panel--confirmation").show();
+          $("#delete-training-provider-panel").show();
+          $("#delete-apprenticeship-panel").hide();
           $("ol.app-task-list li").show();
           var providerNumber = parseInt($('.provider-number.number').text());
           $('.provider-number.number').text(providerNumber - 1);
