@@ -1,19 +1,39 @@
 $(document).ready(function () {
 
+     $(".journey-V1").on("click", function (e) {
+          $.cookie("journey-verion", 'verison-1', {path:'/'});
+     });
+
+     $(".journey-V2").on("click", function (e) {
+          $.cookie("journey-verion", 'verison-2', {path:'/'});
+     });
+
+     if ($.cookie("journey-verion") === 'verison-1') {
+          $('#delete-apprenticeship').attr('href', '/favourites-V1/V1/shopping-basket');
+          $('#delete-provider').attr('href', '/favourites-V1/V1/shopping-basket');
+     } else if ($.cookie("journey-verion") === 'verison-2') {
+          $('#delete-apprenticeship').attr('href', '/favourites-V1/V2/shopping-basket');
+          $('#delete-provider').attr('href', '/favourites-V1/V2/shopping-basket-provider');
+     }
+
+});
+
+
+$(document).ready(function () {
+
+     // APPRENTICESHIP
      $("#delete-apprenticeship").on("click", function (e) {
           $.cookie("delete-apprenticeship", true, {path:'/'});
      });
-
-     // VERSION 2
      // Stores the apprenticeship name - FOR CHOOSEN
-     $(".chosen-apprenticeship").on("click", function (e) {
-          $.cookie("chosen-apprenticeship", $(this).parent().find('.chosen-apprenticeship-value').text(), {path:'/'});
-     });
+     // $(".chosen-apprenticeship").on("click", function (e) {
+     //      $.cookie("chosen-apprenticeship", $(this).parent().find('.chosen-apprenticeship-value').text(), {path:'/'});
+     // });
 
      // Populates the apprenticeship name - FOR CHOOSEN
-     if ($.cookie("chosen-apprenticeship")) {
-          $(".chosen-apprenticeship-name").text($.cookie("chosen-apprenticeship"));
-     }
+     // if ($.cookie("chosen-apprenticeship")) {
+     //      $(".chosen-apprenticeship-name").text($.cookie("chosen-apprenticeship"));
+     // }
 
      // Stores the apprenticeship name - FOR DELETE
      $(".delete-chosen-apprenticeship").on("click", function (e) {
@@ -51,6 +71,58 @@ $(document).ready(function () {
           var apprenticeshipNumber = parseInt($('.apprenticeship-number.number').text());
           $('.apprenticeship-number.number').text(apprenticeshipNumber - 1);
      }
+
+     // TRAINING PROVIDER
+     $("#delete-provider").on("click", function (e) {
+          $.cookie("delete-provider", true, {path:'/'});
+     });
+
+     // Stores the training provider name - FOR CHOOSEN
+     $(".delete-training-provider").on("click", function (e) {
+          $.cookie("chosen-training-provider", $(this).closest('li').find('.chosen-training-provider-value').text(), {path:'/'});
+          $.cookie("provider-number", $(this).data('provider-id'), {path:'/'});
+     });
+
+     // Populates the training provider name - FOR CHOOSEN
+     if ($.cookie("chosen-training-provider")) {
+          $(".chosen-provider-name").text($.cookie("chosen-training-provider"));
+     }
+
+     // Populates the apprenticeship name - FOR DELETE
+     if ($.cookie("chosen-training-provider")) {
+          $(".deleted-training-provider").text($.cookie("chosen-training-provider"));
+     }
+
+     if ($.cookie("delete-provider") == 'true') {
+          $(".govuk-panel--confirmation").show();
+          $("ol.app-task-list li").show();
+          var providerNumber = parseInt($('.provider-number.number').text());
+          $('.provider-number.number').text(providerNumber - 1);
+     }
+
+     if ($.cookie("provider-number") == 1 && $.cookie("delete-provider") == 'true') {
+          $("ol.app-task-list li.one").remove();
+     }
+
+     if ($.cookie("provider-number") == 2 && $.cookie("delete-provider") == 'true') {
+          $("ol.app-task-list li.two").remove();
+     }
+
+     if ($.cookie("provider-number") == 3 && $.cookie("delete-provider") == 'true') {
+          $("ol.app-task-list li.three").remove();
+     }
+
+     if ($.cookie("provider-number") == 4 && $.cookie("delete-provider") == 'true') {
+          $("ol.app-task-list li.four").remove();
+     }
+
+     if ($.cookie("provider-number") == 5 && $.cookie("delete-provider") == 'true') {
+          $("ol.app-task-list li.five").remove();
+     }
+
+
+
+
 
 
      // setTimeout(function() {

@@ -5,72 +5,84 @@
   ESFA - Shopping basket
 {% endblock %}
 
+{% block main %}
+<div class="app-account-header">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <a href="javascript: window.history.go(-1)" class="govuk-back-link">Back</a>
+               </div>
+          </div>
+     </div>
+</div>
+
 {% block content %}
+<div class="govuk-width-container">
 
-<a href="javascript: window.history.go(-1)" class="govuk-back-link">Back</a>
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+               <form method="post" action="version-2">
+                    <h1 class="govuk-heading-xl">Confirm removal of apprenticeship</h1>
 
-<div class="govuk-grid-row">
-     <div class="govuk-grid-column-two-thirds">
-          <form method="post" action="version-2">
-               <h1 class="govuk-heading-xl">Confirm deletion of apprenticeship</h1>
-
-               <h2 class="govuk-heading-l">
-                    <span class="deleted-apprenticeship">Grooveholding UK Ltd</span>
-                    <span class="govuk-caption-l">
-                         <span class="govuk-caption-xl bookmarked-numbers">
-                              <div><span class="provider-number number" id="provider-number">5</span> Training provider(s)</div>
+                    <h2 class="govuk-heading-l">
+                         <span class="deleted-apprenticeship">Grooveholding UK Ltd</span>
+                         <span class="govuk-caption-l">
+                              <span class="govuk-caption-xl bookmarked-numbers">
+                                   <div><span class="provider-number number" id="provider-number">5</span> Training provider(s)</div>
+                              </span>
                          </span>
-                    </span>
-               </h2>
+                    </h2>
 
-               <div class="govuk-inset-text apprenticeship-content one">
-                    <h3 class="govuk-heading-s">Deleting this Apprenticeship will also delete the following training providers from your favourites</h3>
-                    <ol class="govuk-list govuk-list--number">
-                         <li>PARAGON - SKILLS FOR INDUSTRY</li>
-                         <li>Boom Training Ltd</li>
-                         <li>INTEC BUSINESS COLLEGES LTD</li>
-                         <li>Babcock Training</li>
-                         <li>THE CHILDCARE COMPANY (OLD WINDSOR) LIMITE</li>
-                    </ol>
-               </div>
+                    <div class="govuk-inset-text apprenticeship-content one">
+                         <h3 class="govuk-heading-s">Removing this Apprenticeship will also remove the following training providers from your favourites</h3>
+                         <ol class="govuk-list govuk-list--number">
+                              <li>PARAGON - SKILLS FOR INDUSTRY</li>
+                              <li>Boom Training Ltd</li>
+                              <li>INTEC BUSINESS COLLEGES LTD</li>
+                              <li>Babcock Training</li>
+                              <li>THE CHILDCARE COMPANY (OLD WINDSOR) LIMITE</li>
+                         </ol>
+                    </div>
 
-               <div class="govuk-form-group">
+                    <div class="govuk-form-group">
 
-                    <fieldset class="govuk-fieldset">
+                         <fieldset class="govuk-fieldset">
 
-                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                              Are you sure you wish to delete this training provider?
-                         </legend>
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                   Are you sure you wish to delete this training provider?
+                              </legend>
 
-                         <div class="govuk-radios">
+                              <div class="govuk-radios">
 
-                              <div class="govuk-radios__item">
-                                   <input class="govuk-radios__input" id="confirm-delete-provider" name="confirm-delete-provider" type="radio" value="delete" required="">
-                                   <label class="govuk-label govuk-radios__label" for="confirm-delete-provider">
-                                        Yes, delete <span class="deleted-apprenticeship">Grooveholding UK Ltd</span>
-                                   </label>
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="confirm-delete-apprenticeship" name="confirm-delete-apprenticeship" type="radio" value="delete" required="">
+                                        <label class="govuk-label govuk-radios__label" for="confirm-delete-apprenticeship">
+                                             Yes, remove <span class="deleted-apprenticeship">Grooveholding UK Ltd</span>
+                                        </label>
+                                   </div>
+
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="cancel-delete-apprenticeship" name="confirm-delete-apprenticeship" type="radio" value="cancel">
+                                        <label class="govuk-label govuk-radios__label" for="cancel-delete-apprenticeship">
+                                             No, keep the apprenticeship
+                                        </label>
+                                   </div>
+
                               </div>
+                         </fieldset>
 
-                              <div class="govuk-radios__item">
-                                   <input class="govuk-radios__input" id="cancel-delete-provider" name="confirm-delete-provider" type="radio" value="cancel">
-                                   <label class="govuk-label govuk-radios__label" for="cancel-delete-provider">
-                                        No, keep the provider
-                                   </label>
-                              </div>
+                    </div>
 
-                         </div>
-                    </fieldset>
+                    <p>
+                         <a href="#" class="govuk-button govuk-button--disabled" id="delete-apprenticeship" aria-disabled="true">Save and continue</a>
+                    </p>
+               </form>
+          </div>
 
-               </div>
-
-               <p>
-                    <button id="delete-apprenticeship" type="submit" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled">
-                         Save and continue
-                    </button>
-               </p>
-          </form>
      </div>
 
 </div>
+
+{% endblock %}
 
 {% endblock %}

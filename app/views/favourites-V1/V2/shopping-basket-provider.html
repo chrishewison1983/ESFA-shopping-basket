@@ -5,45 +5,79 @@
   ESFA - Shopping basket
 {% endblock %}
 
-{% block content %}
-
-     <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-               <h1 class="govuk-heading-xl">
-                    <span class="govuk-caption-xl">Your employer account</span>
-                    Assurance Aerospace Ltd
-               </h1>
-          </div>
-     </div>
-
-     <div id="version-2">
+{% block main %}
+<div class="app-account-header">
+     <div class="govuk-width-container">
           <div class="govuk-grid-row">
-               <div class="govuk-grid-column-two-thirds">
-                    <h1 class="govuk-heading-l">
-                         <span class="icon-basket"></span>
-                         <span class="chosen-apprenticeship-name">Apprenticeship name</span>
-                         <span class="govuk-caption-xl bookmarked-numbers">
-                              <div><span class="provider-number number">5</span> Training provider(s)</div>
-                         </span>
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         <span class="govuk-caption-xl">Your employer account</span>
+                         Assurance Aerospace Ltd
                     </h1>
                </div>
           </div>
+     </div>
+</div>
+
+<!-- ////////////////////////// COMPARE MESSAGE - START ////////////////////////// -->
+<div id="compare-container">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-m">Your comparison list contains <strong><span class="compare-number">0</span> <span class="comparison-type">comparison type</span></strong></h1>
+               </div>
+               <div class="govuk-grid-column-one-third">
+                    <button type="submit" id="view-compare" class="govuk-button">View comparison list</button>
+               </div>
+          </div>
+     </div>
+</div>
+<!-- ////////////////////////// COMPARE MESSAGE - END ////////////////////////// -->
+
+{% block content %}
+<div id="version-2" class="app-account-main">
+
+     <div class="govuk-width-container">
+
+          <div class="hero-container">
+               <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                         <h1 class="govuk-heading-l">
+                              <span class="icon-basket"></span>
+                              Apprenticeship: <span class="chosen-apprenticeship-name">Apprenticeship name</span>
+                              <span class="govuk-caption-xl bookmarked-numbers">
+                                   <div><span class="provider-number number">5</span> Training provider(s)</div>
+                              </span>
+                         </h1>
+                    </div>
+               </div>
+          </div>
+
           <div class="govuk-grid-row">
                <div class="govuk-grid-column-full">
 
+                    <!-- ================ CONFIRM PANEL - START ================ -->
+                    <div class="govuk-panel govuk-panel--confirmation">
+                         <h1 class="govuk-panel__title">Removal complete</h1>
+                         <div class="govuk-panel__body">
+                              <strong class="deleted-training-provider">HDJ2123F</strong>
+                              <br>has been removed
+                         </div>
+                    </div>
+                    <!-- ================ CONFIRM PANEL - END ================ -->
+
                     <!-- <hr class="no-top-margin"> -->
 
-                    <ol class="app-task-list">
+                    <ol class="app-task-list training-provider">
 
                          <!-- ================ BASKET ITEM - 1 - START ================ -->
-                         <li>
+                         <li class="one">
                               <h2 class="app-task-list__section">
-                                   <span class="app-task-list__section-number">1. </span> <span data-provider-id="1">PARAGON - SKILLS FOR INDUSTRY</span>
-                                   <a href="#" class="govuk-button chosen-provider">Recuit an apprentice</a>
+                                   <span class="app-task-list__section-number">1. </span> <span class="chosen-training-provider-value">PARAGON - SKILLS FOR INDUSTRY</span>
                               </h2>
 
                               <div class="govuk-grid-row">
-                                   <div class="govuk-grid-column-two-thirds">
+                                   <div class="govuk-grid-column-full">
                                         <details class="govuk-details">
                                              <summary class="govuk-details__summary">
                                                   <span class="govuk-details__summary-text">
@@ -61,6 +95,8 @@
                                                   <p><strong>Achievement rate:</strong> 65%</p>
                                              </div>
                                         </details>
+                                   </div>
+                                   <div class="govuk-grid-column-full training-provider-content">
                                         <div class="govuk-form-group">
                                              <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
                                                   <div class="govuk-checkboxes">
@@ -70,12 +106,11 @@
                                                                  Compare
                                                             </label>
                                                        </div>
-                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link">Delete</a>
+                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider" data-provider-id="1">Remove</a>
                                                   </div>
                                              </fieldset>
                                         </div>
-                                   </div>
-                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <a href="#" class="govuk-button chosen-provider">Recruit an apprentice</a>
                                         <a href="#">Manage permissions</a>
                                    </div>
                               </div>
@@ -83,14 +118,13 @@
                          <!-- ================ BASKET ITEM - 1 - END ================ -->
 
                          <!-- ================ BASKET ITEM - 2 - START ================ -->
-                         <li>
+                         <li class="two">
                               <h2 class="app-task-list__section">
-                                   <span class="app-task-list__section-number">2. </span> <span data-provider-id="2">Boom Training Ltd</span>
-                                   <a href="#" class="govuk-button chosen-provider">Recuit an apprentice</a>
+                                   <span class="app-task-list__section-number">2. </span> <span data-provider-id="2" class="chosen-training-provider-value">Boom Training Ltd</span>
                               </h2>
 
                               <div class="govuk-grid-row">
-                                   <div class="govuk-grid-column-two-thirds">
+                                   <div class="govuk-grid-column-full">
                                         <details class="govuk-details">
                                              <summary class="govuk-details__summary">
                                                   <span class="govuk-details__summary-text">
@@ -108,6 +142,8 @@
                                                   <p><strong>Achievement rate:</strong> 65%</p>
                                              </div>
                                         </details>
+                                   </div>
+                                   <div class="govuk-grid-column-full training-provider-content">
                                         <div class="govuk-form-group">
                                              <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
                                                   <div class="govuk-checkboxes">
@@ -117,12 +153,11 @@
                                                                  Compare
                                                             </label>
                                                        </div>
-                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link">Delete</a>
+                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider" data-provider-id="2">Remove</a>
                                                   </div>
                                              </fieldset>
                                         </div>
-                                   </div>
-                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <a href="#" class="govuk-button chosen-provider">Recruit an apprentice</a>
                                         <a href="#">Manage permissions</a>
                                    </div>
                               </div>
@@ -130,14 +165,13 @@
                          <!-- ================ BASKET ITEM - 2 - END ================ -->
 
                          <!-- ================ BASKET ITEM - 3 - START ================ -->
-                         <li>
+                         <li class="three">
                               <h2 class="app-task-list__section">
-                                   <span class="app-task-list__section-number">3. </span> <span data-provider-id="3">INTEC BUSINESS COLLEGES LTD</span>
-                                   <a href="#" class="govuk-button chosen-provider">Recuit an apprentice</a>
+                                   <span class="app-task-list__section-number">3. </span> <span data-provider-id="3" class="chosen-training-provider-value">INTEC BUSINESS COLLEGES LTD</span>
                               </h2>
 
                               <div class="govuk-grid-row">
-                                   <div class="govuk-grid-column-two-thirds">
+                                   <div class="govuk-grid-column-full">
                                         <details class="govuk-details">
                                              <summary class="govuk-details__summary">
                                                   <span class="govuk-details__summary-text">
@@ -155,6 +189,8 @@
                                                   <p><strong>Achievement rate:</strong> 65%</p>
                                              </div>
                                         </details>
+                                   </div>
+                                   <div class="govuk-grid-column-full training-provider-content">
                                         <div class="govuk-form-group">
                                              <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
                                                   <div class="govuk-checkboxes">
@@ -164,12 +200,11 @@
                                                                  Compare
                                                             </label>
                                                        </div>
-                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link">Delete</a>
+                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider" data-provider-id="3">Remove</a>
                                                   </div>
                                              </fieldset>
                                         </div>
-                                   </div>
-                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <a href="#" class="govuk-button chosen-provider">Recruit an apprentice</a>
                                         <a href="#">Manage permissions</a>
                                    </div>
                               </div>
@@ -177,14 +212,13 @@
                          <!-- ================ BASKET ITEM - 3 - END ================ -->
 
                          <!-- ================ BASKET ITEM - 4 - START ================ -->
-                         <li>
+                         <li class="four">
                               <h2 class="app-task-list__section">
-                                   <span class="app-task-list__section-number">4. </span> <span data-provider-id="4">Babcock Training</span>
-                                   <a href="#" class="govuk-button chosen-provider">Recuit an apprentice</a>
+                                   <span class="app-task-list__section-number">4. </span> <span data-provider-id="4" class="chosen-training-provider-value">Babcock Training</span>
                               </h2>
 
                               <div class="govuk-grid-row">
-                                   <div class="govuk-grid-column-two-thirds">
+                                   <div class="govuk-grid-column-full">
                                         <details class="govuk-details">
                                              <summary class="govuk-details__summary">
                                                   <span class="govuk-details__summary-text">
@@ -202,6 +236,8 @@
                                                   <p><strong>Achievement rate:</strong> 65%</p>
                                              </div>
                                         </details>
+                                   </div>
+                                   <div class="govuk-grid-column-full training-provider-content">
                                         <div class="govuk-form-group">
                                              <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
                                                   <div class="govuk-checkboxes">
@@ -211,12 +247,11 @@
                                                                  Compare
                                                             </label>
                                                        </div>
-                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link">Delete</a>
+                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider" data-provider-id="4">Remove</a>
                                                   </div>
                                              </fieldset>
                                         </div>
-                                   </div>
-                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <a href="#" class="govuk-button chosen-provider">Recruit an apprentice</a>
                                         <a href="#">Manage permissions</a>
                                    </div>
                               </div>
@@ -224,14 +259,13 @@
                          <!-- ================ BASKET ITEM - 4 - END ================ -->
 
                          <!-- ================ BASKET ITEM - 5 - START ================ -->
-                         <li>
+                         <li class="five">
                               <h2 class="app-task-list__section">
-                                   <span class="app-task-list__section-number">5. </span> <span data-provider-id="5">THE CHILDCARE COMPANY (OLD WINDSOR) LIMITED</span>
-                                   <a href="#" class="govuk-button chosen-provider">Recuit an apprentice</a>
+                                   <span class="app-task-list__section-number">5. </span> <span data-provider-id="5" class="chosen-training-provider-value">THE CHILDCARE COMPANY (OLD WINDSOR) LIMITED</span>
                               </h2>
 
                               <div class="govuk-grid-row">
-                                   <div class="govuk-grid-column-two-thirds">
+                                   <div class="govuk-grid-column-full">
                                         <details class="govuk-details">
                                              <summary class="govuk-details__summary">
                                                   <span class="govuk-details__summary-text">
@@ -249,6 +283,8 @@
                                                   <p><strong>Achievement rate:</strong> 65%</p>
                                              </div>
                                         </details>
+                                   </div>
+                                   <div class="govuk-grid-column-full training-provider-content">
                                         <div class="govuk-form-group">
                                              <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
                                                   <div class="govuk-checkboxes">
@@ -258,12 +294,11 @@
                                                                  Compare
                                                             </label>
                                                        </div>
-                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link">Delete</a>
+                                                       <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider" data-provider-id="5">Remove</a>
                                                   </div>
                                              </fieldset>
                                         </div>
-                                   </div>
-                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <a href="#" class="govuk-button chosen-provider">Recruit an apprentice</a>
                                         <a href="#">Manage permissions</a>
                                    </div>
                               </div>
@@ -291,5 +326,9 @@
           </div>
 
      </div> -->
+
+</div>
+
+{% endblock %}
 
 {% endblock %}

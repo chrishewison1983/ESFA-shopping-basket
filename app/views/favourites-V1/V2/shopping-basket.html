@@ -5,42 +5,66 @@
   ESFA - Shopping basket
 {% endblock %}
 
-{% block content %}
-
-     <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-               <h1 class="govuk-heading-xl">
-                    <span class="govuk-caption-xl">Your employer account</span>
-                    Assurance Aerospace Ltd
-               </h1>
-          </div>
-     </div>
-
-     <div id="version-2">
+{% block main %}
+<div class="app-account-header">
+     <div class="govuk-width-container">
           <div class="govuk-grid-row">
-               <div class="govuk-grid-column-two-thirds">
-                    <h1 class="govuk-heading-l">
-                         <span class="icon-basket"></span>
-                         Favourite apprenticeships
-                         <span class="govuk-caption-xl bookmarked-numbers">
-                              <div><span class="apprenticeship-number number">2</span> Apprenticeships</div>
-                         </span>
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         <span class="govuk-caption-xl">Your employer account</span>
+                         Assurance Aerospace Ltd
                     </h1>
                </div>
           </div>
+     </div>
+</div>
 
-          <!-- ================ CONFIRM PANEL - START ================ -->
-          <div class="govuk-panel govuk-panel--confirmation">
-               <h1 class="govuk-panel__title">Deletion complete</h1>
-               <div class="govuk-panel__body">
-                    <strong class="deleted-apprenticeship">HDJ2123F</strong>
-                    <br>has been removed
+<!-- ////////////////////////// COMPARE MESSAGE - START ////////////////////////// -->
+<div id="compare-container">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-m">Your comparison list contains <strong><span class="compare-number">0</span> <span class="comparison-type">comparison type</span></strong></h1>
+               </div>
+               <div class="govuk-grid-column-one-third">
+                    <button type="submit" id="view-compare" class="govuk-button">View comparison list</button>
                </div>
           </div>
-          <!-- ================ CONFIRM PANEL - END ================ -->
+     </div>
+</div>
+<!-- ////////////////////////// COMPARE MESSAGE - END ////////////////////////// -->
+
+{% block content %}
+<div id="version-2" class="app-account-main">
+
+     <div class="govuk-width-container">
+
+          <div class="hero-container">
+               <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                         <h1 class="govuk-heading-l">
+                              <span class="icon-basket"></span>
+                              Favourite apprenticeships
+                              <span class="govuk-caption-xl bookmarked-numbers">
+                                   <div><span class="apprenticeship-number number">2</span> Apprenticeships</div>
+                              </span>
+                         </h1>
+                    </div>
+               </div>
+          </div>
 
           <div class="govuk-grid-row">
                <div class="govuk-grid-column-full">
+
+                    <!-- ================ CONFIRM PANEL - START ================ -->
+                    <div class="govuk-panel govuk-panel--confirmation">
+                         <h1 class="govuk-panel__title">Removal complete</h1>
+                         <div class="govuk-panel__body">
+                              <strong class="deleted-apprenticeship">HDJ2123F</strong>
+                              <br>has been removed
+                         </div>
+                    </div>
+                    <!-- ================ CONFIRM PANEL - END ================ -->
 
                     <!-- <hr class="no-top-margin"> -->
 
@@ -50,7 +74,7 @@
                          <li class="one">
                               <h2 class="app-task-list__section">
                                    <span class="app-task-list__section-number">1. </span> <a href="#" class="chosen-apprenticeship-value">Business Administrator</a>
-                                   <a href="version-2-provider" class="govuk-button chosen-apprenticeship">Choose training provider</a>
+                                   <a href="shopping-basket-provider" class="govuk-button">Choose training provider</a>
                               </h2>
 
                               <div class="govuk-grid-row">
@@ -67,13 +91,13 @@
                                                                  Compare
                                                             </label>
                                                        </div>
-                                                       <a href="/favourites-V1/delete-apprenticeship" class="govuk-delete-link delete-chosen-apprenticeship" data-delete-item="1">Delete</a>
+                                                       <a href="/favourites-V1/delete-apprenticeship" class="govuk-delete-link delete-chosen-apprenticeship" data-delete-item="1">Remove</a>
                                                   </div>
                                              </fieldset>
                                         </div>
                                    </div>
                                    <div class="govuk-grid-column-one-third training-provider-content">
-                                        <h3 class="govuk-heading-s"><span>5</span> saved training providers</h3>
+                                        <h3 class="govuk-heading-s"><span class="text-numbers">saved training providers</span> <span class="provider-number number">5</span></h3>
                                         <a href="#">Reserve funding</a><br><a href="#">Recruit an apprentice</a>
                                    </div>
                               </div>
@@ -84,7 +108,18 @@
                          <li class="two">
                               <h2 class="app-task-list__section">
                                    <span class="app-task-list__section-number">2. </span> <a href="#" class="chosen-apprenticeship-value">Business to business sales professional</a>
-                                   <a href="version-2-provider" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled chosen-apprenticeship">Choose training provider</a>
+                                   <section class="postcode-search">
+                                        <!-- <h4 class="govuk-heading-s">Enter the postcode of where the apprentice will work...</h4> -->
+                                        <fieldset class="govuk-fieldset">
+                                             <div class="govuk-form-group">
+                                                  <!-- <label class="govuk-label" for="provider-list-postcode">
+                                                       Postcode
+                                                  </label> -->
+                                                  <a id="postcode-search" href="#" class="govuk-button govuk-button--search"><span></span><span class="text">Search</span></a>
+                                                  <input class="govuk-input govuk-input--width-10" id="provider-list-postcode" name="provider-list-postcode" placeholder="Search by postcode..." type="text">
+                                             </div>
+                                        </fieldset>
+                                   </section>
                               </h2>
                               <div class="govuk-grid-row">
                                    <div class="govuk-grid-column-two-thirds">
@@ -100,13 +135,13 @@
                                                                  Compare
                                                             </label>
                                                        </div>
-                                                       <a href="/favourites-V1/delete-apprenticeship" class="govuk-delete-link delete-chosen-apprenticeship" data-delete-item="2">Delete</a>
+                                                       <a href="/favourites-V1/delete-apprenticeship" class="govuk-delete-link delete-chosen-apprenticeship" data-delete-item="2">Remove</a>
                                                   </div>
                                              </fieldset>
                                         </div>
                                    </div>
                                    <div class="govuk-grid-column-one-third training-provider-content">
-                                        <h3 class="govuk-heading-s"><span>0</span> saved training providers</h3>
+                                        <h3 class="govuk-heading-s"><span class="text-numbers">saved training providers</span> <span class="provider-number number zero">0</span></h3>
                                         <a href="#">Reserve funding</a><br><a href="#">Recruit an apprentice</a>
                                    </div>
                               </div>
@@ -135,5 +170,9 @@
           </div>
 
      </div> -->
+
+</div>
+
+{% endblock %}
 
 {% endblock %}

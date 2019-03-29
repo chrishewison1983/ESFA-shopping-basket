@@ -1,0 +1,271 @@
+
+{% extends "../../layout.html" %}
+
+{% block pageTitle %}
+  ESFA - Shopping basket
+{% endblock %}
+
+{% block main %}
+<div class="app-account-header">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         <span class="govuk-caption-xl">Your employer account</span>
+                         Assurance Aerospace Ltd
+                    </h1>
+               </div>
+          </div>
+     </div>
+</div>
+
+<!-- ////////////////////////// COMPARE MESSAGE - START ////////////////////////// -->
+<div id="compare-container">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-m">Your comparison list contains <strong><span class="compare-number">0</span> <span class="comparison-type">comparison type</span></strong></h1>
+               </div>
+               <div class="govuk-grid-column-one-third">
+                    <button type="submit" id="view-compare" class="govuk-button">View comparison list</button>
+               </div>
+          </div>
+     </div>
+</div>
+<!-- ////////////////////////// COMPARE MESSAGE - END ////////////////////////// -->
+
+{% block content %}
+<div id="version-1" class="app-account-main">
+
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-l">
+                         <span class="icon-basket"></span>
+                         Favourite apprenticeships and<br>training providers
+                         <span class="govuk-caption-xl bookmarked-numbers">
+                              <div><span class="apprenticeship-number number">2</span> Apprenticeships</div>
+                              <!-- <span class="separator"></span>
+                              <div><span class="provider-number number">5</span> Training provider(s)</div> -->
+                         </span>
+                    </h1>
+               </div>
+               <div class="govuk-grid-column-one-third">
+                    <!-- <div class="cta-component">
+                         <h2 class="govuk-heading-s">Save your choices and create your gov.uk account to start hiring the future</h2>
+                         <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start">Hire an apprentice</a>
+                    </div> -->
+               </div>
+          </div>
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+
+                    <!-- ================ CONFIRM PANEL - START ================ -->
+                    <div class="govuk-panel govuk-panel--confirmation">
+                         <h1 class="govuk-panel__title">Removal complete</h1>
+                         <div class="govuk-panel__body">
+                              <strong class="deleted-apprenticeship deleted-training-provider">HDJ2123F</strong>
+                              <br>has been removed
+                         </div>
+                    </div>
+                    <!-- ================ CONFIRM PANEL - END ================ -->
+
+                    <!-- <hr class="no-top-margin"> -->
+
+                    <ol class="app-task-list">
+
+                         <!-- ================ BASKET ITEM - 1 - START ================ -->
+                         <li>
+                              <h2 class="app-task-list__section">
+                                   <span class="app-task-list__section-number">1. </span> <a href="#" class="chosen-provider-name">Business Administrator</a>
+                                   <div class="govuk-form-group">
+                                        <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
+                                             <div class="govuk-checkboxes">
+                                                  <div class="govuk-checkboxes__item">
+                                                       <input class="govuk-checkboxes__input" id="compare-app-1" name="compare-app" type="checkbox" value="carcasses">
+                                                       <label class="govuk-label govuk-checkboxes__label" for="compare-app-1">
+                                                            Compare
+                                                       </label>
+                                                  </div>
+                                                  <a href="/favourites-V1/delete-apprenticeship" class="govuk-delete-link delete-apprenticeship">Remove</a>
+                                             </div>
+                                        </fieldset>
+                                   </div>
+                              </h2>
+
+                              <div class="govuk-grid-row">
+                                   <div class="govuk-grid-column-one-third">
+                                        <p class="new"><span>new</span></p>
+                                        <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
+                                        <p><strong>Typical length:</strong> 18 months</p>
+                                   </div>
+                                   <div class="govuk-grid-column-two-thirds training-provider-content">
+                                        <h3 class="govuk-heading-s"><span class="provider-number number">5</span> saved training providers</h3>
+                                        <ul class="app-task-list__items">
+                                             <li class="app-task-list__item">
+                                                  <a class="app-task-list__task-name chosen-training-provider-value" href="#" aria-describedby="training-provider-title-1">
+                                                       PARAGON - SKILLS FOR INDUSTRY
+                                                  </a>
+                                                  <div class="govuk-form-group">
+                                                       <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
+                                                            <div class="govuk-checkboxes">
+                                                                 <div class="govuk-checkboxes__item">
+                                                                      <input class="govuk-checkboxes__input" id="compare-provider-1" name="compare-provider" type="checkbox" value="carcasses">
+                                                                      <label class="govuk-label govuk-checkboxes__label" for="compare-provider-1">
+                                                                           Compare
+                                                                      </label>
+                                                                 </div>
+                                                                 <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider">Remove</a>
+                                                            </div>
+                                                       </fieldset>
+                                                  </div>
+                                             </li>
+                                             <li class="app-task-list__item">
+                                                  <a class="app-task-list__task-name chosen-training-provider-value" href="#" aria-describedby="training-provider-title-2">
+                                                       Boom Training Ltd
+                                                  </a>
+                                                  <div class="govuk-form-group">
+                                                       <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
+                                                            <div class="govuk-checkboxes">
+                                                                 <div class="govuk-checkboxes__item">
+                                                                      <input class="govuk-checkboxes__input" id="compare-provider-2" name="compare-provider" type="checkbox" value="carcasses">
+                                                                      <label class="govuk-label govuk-checkboxes__label" for="compare-provider-2">
+                                                                           Compare
+                                                                      </label>
+                                                                 </div>
+                                                                 <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider">Remove</a>
+                                                            </div>
+                                                       </fieldset>
+                                                  </div>
+                                             </li>
+                                             <li class="app-task-list__item">
+                                                  <a class="app-task-list__task-name chosen-training-provider-value" href="#" aria-describedby="training-provider-title-3">
+                                                       INTEC BUSINESS COLLEGES LTD
+                                                  </a>
+                                                  <div class="govuk-form-group">
+                                                       <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
+                                                            <div class="govuk-checkboxes">
+                                                                 <div class="govuk-checkboxes__item">
+                                                                      <input class="govuk-checkboxes__input" id="compare-provider-3" name="compare-provider" type="checkbox" value="carcasses">
+                                                                      <label class="govuk-label govuk-checkboxes__label" for="compare-provider-3">
+                                                                           Compare
+                                                                      </label>
+                                                                 </div>
+                                                                 <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider">Remove</a>
+                                                            </div>
+                                                       </fieldset>
+                                                  </div>
+                                             </li>
+                                             <li class="app-task-list__item">
+                                                  <a class="app-task-list__task-name chosen-training-provider-value" href="#" aria-describedby="training-provider-title-4">
+                                                       Babcock Training
+                                                  </a>
+                                                  <div class="govuk-form-group">
+                                                       <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
+                                                            <div class="govuk-checkboxes">
+                                                                 <div class="govuk-checkboxes__item">
+                                                                      <input class="govuk-checkboxes__input" id="compare-provider-4" name="compare-provider" type="checkbox" value="carcasses">
+                                                                      <label class="govuk-label govuk-checkboxes__label" for="compare-provider-4">
+                                                                           Compare
+                                                                      </label>
+                                                                 </div>
+                                                                 <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider">Remove</a>
+                                                            </div>
+                                                       </fieldset>
+                                                  </div>
+                                             </li>
+                                             <li class="app-task-list__item">
+                                                  <a class="app-task-list__task-name chosen-training-provider-value" href="#" aria-describedby="training-provider-title-5">
+                                                       THE CHILDCARE COMPANY LTD
+                                                  </a>
+                                                  <div class="govuk-form-group">
+                                                       <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
+                                                            <div class="govuk-checkboxes">
+                                                                 <div class="govuk-checkboxes__item">
+                                                                      <input class="govuk-checkboxes__input" id="compare-provider-5" name="compare-provider" type="checkbox" value="carcasses">
+                                                                      <label class="govuk-label govuk-checkboxes__label" for="compare-provider-5">
+                                                                           Compare
+                                                                      </label>
+                                                                 </div>
+                                                                 <a href="/favourites-V1/delete-provider" class="govuk-delete-link delete-training-provider">Remove</a>
+                                                            </div>
+                                                       </fieldset>
+                                                  </div>
+                                             </li>
+                                        </ul>
+                                   </div>
+                              </div>
+                         </li>
+                         <!-- ================ BASKET ITEM - 1 - END ================ -->
+
+                         <!-- ================ BASKET ITEM - 2 - START ================ -->
+                         <li>
+                              <h2 class="app-task-list__section">
+                                   <span class="app-task-list__section-number">2. </span> <a href="#" class="chosen-provider-name">Business to business sales professional</a>
+                                   <div class="govuk-form-group">
+                                        <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
+                                             <div class="govuk-checkboxes">
+                                                  <div class="govuk-checkboxes__item">
+                                                       <input class="govuk-checkboxes__input" id="compare-app-2" name="compare-app" type="checkbox" value="carcasses">
+                                                       <label class="govuk-label govuk-checkboxes__label" for="compare-app-2">
+                                                            Compare
+                                                       </label>
+                                                  </div>
+                                                  <a href="/favourites-V1/delete-apprenticeship" class="govuk-delete-link delete-apprenticeship">Remove</a>
+                                             </div>
+                                        </fieldset>
+                                   </div>
+                              </h2>
+                              <div class="govuk-grid-row">
+                                   <div class="govuk-grid-column-one-third">
+                                        <p class="new"><span>new</span></p>
+                                        <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
+                                        <p><strong>Typical length:</strong> 18 months</p>
+                                   </div>
+                                   <div class="govuk-grid-column-two-thirds training-provider-content">
+                                        <h3 class="govuk-heading-s"><span class="provider-number number zero">0</span> saved training providers</h3>
+                                        <section class="postcode-search">
+                                             <h4 class="govuk-heading-s">Enter the postcode of where the apprentice will work...</h4>
+                                             <fieldset class="govuk-fieldset">
+                                                  <div class="govuk-form-group">
+                                                       <label class="govuk-label" for="provider-list-postcode">
+                                                            Postcode
+                                                       </label>
+                                                       <input class="govuk-input govuk-input--width-10" id="provider-list-postcode" name="provider-list-postcode" type="text">
+                                                       <a id="postcode-search" href="#" class="govuk-button govuk-button--search"><span></span><span class="text">Search</span></a>                                             </div>
+                                             </fieldset>
+                                        </section>
+                                   </div>
+                              </div>
+
+                         </li>
+                         <!-- ================ BASKET ITEM - 2 - END ================ -->
+
+                    </ol>
+
+               </div>
+
+          </div>
+
+          <!-- <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+
+                    <hr>
+
+                    <div class="cta-component full-width">
+                         <h2 class="govuk-heading-m">Save your choices and create your gov.uk account to start hiring the future</h2>
+                         <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start">Hire an apprentice</a>
+                    </div>
+
+               </div>
+
+          </div> -->
+
+     </div>
+
+</div>
+
+{% endblock %}
+
+{% endblock %}
