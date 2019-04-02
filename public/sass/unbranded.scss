@@ -24,3 +24,19 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
      font-weight: bold;
      font-size: 0.875rem;
 }
+
+.feedback {
+     display: inline-block;
+     float: right;
+     width: 1.5em;
+     height: 1.5em;
+     margin: 0 0 0 0.5em;
+     &.yes {
+          background: url('../images/tick.svg') no-repeat;
+          background-size: contain;
+     }
+     &.no {
+          background: url('../images/cross.svg') no-repeat;
+          background-size: contain;
+     }
+}

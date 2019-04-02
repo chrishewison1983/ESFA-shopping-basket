@@ -21,6 +21,9 @@
                justify-content: center;
                position: relative;
                z-index: 10;
+               .govuk-details__text {
+                    padding-right: 0;
+               }
                .govuk-button {
                     margin: 0 0 0.25em 0;
                }

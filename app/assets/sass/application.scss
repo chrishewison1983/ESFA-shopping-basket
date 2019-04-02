@@ -56,3 +56,16 @@ $govuk-global-styles: true;
 .govuk-grid-column-three-fifths {
 	@include grid-column( 3/5, $full-width: tablet );
 }
+
+.govuk-panel--confirmation {
+     position: relative;
+     .close-confirmation {
+          position: absolute;
+          top: 1em;
+          right: 1em;
+          color: white;
+          padding: 0 0 0 1.5em;
+          background: url('../images/close-white.svg') no-repeat 0% 50%;
+          background-size: 1em;
+     }
+}

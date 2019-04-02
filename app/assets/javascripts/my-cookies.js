@@ -26,14 +26,14 @@ $(document).ready(function () {
           $.cookie("delete-apprenticeship", true, {path:'/'});
      });
      // Stores the apprenticeship name - FOR CHOOSEN
-     // $(".chosen-apprenticeship").on("click", function (e) {
-     //      $.cookie("chosen-apprenticeship", $(this).parent().find('.chosen-apprenticeship-value').text(), {path:'/'});
-     // });
+     $(".chosen-apprenticeship").on("click", function (e) {
+          $.cookie("chosen-apprenticeship", $(this).closest('li').find('.chosen-apprenticeship-value').text(), {path:'/'});
+     });
 
      // Populates the apprenticeship name - FOR CHOOSEN
-     // if ($.cookie("chosen-apprenticeship")) {
-     //      $(".chosen-apprenticeship-name").text($.cookie("chosen-apprenticeship"));
-     // }
+     if ($.cookie("chosen-apprenticeship")) {
+          $(".chosen-apprenticeship-name").text($.cookie("chosen-apprenticeship"));
+     }
 
      // Stores the apprenticeship name - FOR DELETE
      $(".delete-apprenticeship").on("click", function (e) {
