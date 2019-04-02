@@ -69,3 +69,9 @@ $govuk-global-styles: true;
           background-size: 1em;
      }
 }
+
+.app-account-header {
+     .govuk-back-link {
+          margin-top: 0;
+     }
+}
