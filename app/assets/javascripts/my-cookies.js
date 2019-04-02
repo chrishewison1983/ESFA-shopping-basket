@@ -48,10 +48,10 @@ $(document).ready(function () {
 
      if ($.cookie("apprenticeship-number") == 1) {
           $("#provider-number").text('5');
-          $(".apprenticeship-content.apprenticeship-one").css('display', 'inline-block');
+          $(".apprenticeship-content.one").css('display', 'inline-block');
      } else if ($.cookie("apprenticeship-number") == 2) {
           $("#provider-number").text('0');
-          $(".apprenticeship-content.apprenticeship-two").css('display', 'none');
+          $(".apprenticeship-content.two").css('display', 'none');
      }
 
      if ($.cookie("apprenticeship-number") == 1 && $.cookie("delete-apprenticeship") == 'true') {

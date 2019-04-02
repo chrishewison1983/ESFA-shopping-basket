@@ -1,0 +1,193 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+     Manage apprenticeships
+{% endblock %}
+
+{% block main %}
+<div class="compare-wrapper">
+
+     <div class="app-account-header">
+          <div class="govuk-width-container">
+               <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                         <a href="javascript: window.history.go(-1)" class="govuk-back-link">Back</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+</div>
+
+{% block content %}
+<div class="compare-wrapper">
+
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <form method="post" action="version-2">
+                         <h1 class="govuk-heading-xl">
+                              Compare training providers
+                              <span class="govuk-caption-xl bookmarked-numbers">
+                                   <div><span class="number" id="compare-number">2</span> Training providers</div>
+                              </span>
+                         </h1>
+
+                         <ul id="compare-apprenticeships-list">
+
+                              <!-- ///////////////////////// LIST ITEM - 1 - START ///////////////////////// -->
+                              <li class="populated">
+
+                                   <div class="empty">
+                                        <h1 class="govuk-heading-m">Add an training provider to compare</h1>
+                                        <a href="javascript: window.history.go(-1)" class="govuk-button">Open favourites</a>
+                                   </div>
+
+                                   <div class="content">
+                                        <h1 class="govuk-heading-m">PARAGON - SKILLS FOR INDUSTRY</h1>
+                                        <div class="item-content">
+                                             <p><span class="national">national</span></p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Distance:</p>
+                                             <p>1.1 miles away</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Apprenticeship:</p>
+                                             <p>Business Administrator</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Level:</p>
+                                             <p>3 (equivalent to A levels at grades A to E)</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Training options:</p>
+                                             <details class="govuk-details">
+                                                  <summary class="govuk-details__summary">
+                                                       <span class="govuk-details__summary-text">Show more info</span>
+                                                  </summary>
+                                                  <div class="govuk-details__text">
+                                                       <ul class="govuk-list">
+                                                            <li>day release <span class="feedback no"></span></li>
+                                                            <li>block release <span class="feedback no"></span></li>
+                                                            <li>at your location <span class="feedback yes"></span></li>
+                                                       </ul>
+                                                  </div>
+                                             </details>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Employer satisfaction: <span class="number">86%</span></p>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Learner satisfaction: <span class="number">91%</span></p>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Achievement rate: <span class="number">65%</span></p>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Employer satisfaction: <span class="number">86%</span></p>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Learner satisfaction: <span class="number">91%</span></p>
+                                        </div>
+                                   </div>
+                                   <div class="remove-cta"><a href="#" class="remove-item">X Remove</a></div>
+
+                              </li>
+                              <!-- ///////////////////////// LIST ITEM - 1 - EMD ///////////////////////// -->
+
+                              <!-- ///////////////////////// LIST ITEM - 2 - START ///////////////////////// -->
+                              <li class="populated">
+                                   <div class="empty">
+                                        <h1 class="govuk-heading-m">Add an training provider to compare</h1>
+                                        <a href="javascript: window.history.go(-1)" class="govuk-button">Open favourites</a>
+                                   </div>
+
+                                   <div class="content">
+                                        <h1 class="govuk-heading-m">Boom Training Ltd</h1>
+                                        <div class="item-content">
+                                             <p><br></p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Distance:</p>
+                                             <p>1.2 miles away</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Apprenticeship:</p>
+                                             <p>Business Administrator</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Level:</p>
+                                             <p>3 (equivalent to A levels at grades A to E)</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Training options:</p>
+                                             <details class="govuk-details">
+                                                  <summary class="govuk-details__summary">
+                                                       <span class="govuk-details__summary-text">Show more info</span>
+                                                  </summary>
+                                                  <div class="govuk-details__text">
+                                                       <ul class="govuk-list">
+                                                            <li>day release <span class="feedback no"></span></li>
+                                                            <li>block release <span class="feedback no"></span></li>
+                                                            <li>at your location <span class="feedback yes"></span></li>
+                                                       </ul>
+                                                  </div>
+                                             </details>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Employer satisfaction: <span class="number">N/D</span></p>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Learner satisfaction: <span class="number">84%</span></p>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Achievement rate: <span class="number">N/D</span></p>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Employer satisfaction: <span class="number">N/D</span></p>
+                                        </div>
+                                        <div class="item-content margin-bottom">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Learner satisfaction: <span class="number">84%</span></p>
+                                        </div>
+                                   </div>
+
+                                   <div class="remove-cta"><a href="#" class="remove-item">X Remove</a></div>
+
+                              </li>
+                              <!-- ///////////////////////// LIST ITEM - 2 - EMD ///////////////////////// -->
+
+                              <!-- ///////////////////////// LIST ITEM - 3 - START ///////////////////////// -->
+                              <li>
+                                   <div class="empty">
+                                        <h1 class="govuk-heading-m">Add an training provider to compare</h1>
+                                        <a href="javascript: window.history.go(-1)" class="govuk-button">Open favourites</a>
+                                   </div>
+                              </li>
+                              <!-- ///////////////////////// LIST ITEM - 3 - EMD ///////////////////////// -->
+
+                              <!-- ///////////////////////// LIST ITEM - 4 - START ///////////////////////// -->
+                              <li>
+                                   <div class="empty">
+                                        <h1 class="govuk-heading-m">Add an training provider to compare</h1>
+                                        <a href="javascript: window.history.go(-1)" class="govuk-button">Open favourites</a>
+                                   </div>
+                              </li>
+                              <!-- ///////////////////////// LIST ITEM - 4 - EMD ///////////////////////// -->
+
+                         </ul>
+
+                    </form>
+               </div>
+
+          </div>
+
+     </div>
+
+</div>
+
+{% endblock %}
+
+{% endblock %}
