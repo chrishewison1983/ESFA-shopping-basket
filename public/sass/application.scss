@@ -57,15 +57,25 @@ $govuk-global-styles: true;
 	@include grid-column( 3/5, $full-width: tablet );
 }
 
-.govuk-panel--confirmation {
+.success-summary {
+     // display: none;
+     padding: 1.5em;
+     border: 10px solid govuk-colour("turquoise");
      position: relative;
+     background: white;
      .close-confirmation {
           position: absolute;
           top: 1em;
           right: 1em;
-          color: white;
+          // color: white;
           padding: 0 0 0 1.5em;
-          background: url('../images/close-white.svg') no-repeat 0% 50%;
+          background: url('../images/close-blue.svg') no-repeat 0% 50%;
           background-size: 1em;
+     }
+}
+
+.app-account-header {
+     .govuk-back-link {
+          margin-top: 0;
      }
 }
