@@ -1,0 +1,145 @@
+nav {
+     &.main-navigation {
+          background: $govuk-link-colour;
+          // min-height: 4em;
+          margin-top: -10px;
+          margin-bottom: -4px;
+          ul {
+               display: inline-block;
+               width: 100%;
+               padding: 0;
+               margin: 0;
+               li {
+                    display: inline-block;
+                    // align-items: center;
+                    // justify-content: flex-start;
+                    list-style: none;
+                    // width: 20%;
+                    // margin: 1em 0.95em;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                    float: left;
+                    position: relative;
+                    // &:last-of-type {
+                    //      margin-right: 0;
+                    // }
+                    &:hover, &:active, &:focus {
+                         &:hover, &:active, &:focus {
+                              background: white;
+                              color: $govuk-link-colour;
+                              a {
+                                   color: $govuk-link-colour;
+                              }
+                         }
+                         .main-nav-sub-nav {
+                              display: inline-block;
+                         }
+                    }
+                    &:last-of-type {
+                         margin: 0;
+                         .main-nav-sub-nav {
+                              ul {
+                                   li {
+                                        &.third-level-nav {
+                                             .main-nav-third-level-nav {
+                                                  left: inherit !important;
+                                                  right: 350px;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    a {
+                         color: white;
+                         font-weight: bold;
+                         font-size: 1.2rem;
+                         padding: 1em 2.5em 1em 0.795em;
+                         display: inline-block;
+                         background: url('../images/arrow-down-white.svg') no-repeat;
+                         background-position: right 1em bottom 1.3em;
+                         background-size: 1em;
+                         &:hover, &:active, &:focus {
+                              background: url('../images/arrow-up-blue.svg') no-repeat;
+                              background-position: right 1em bottom 1.3em;
+                              background-size: 1em;
+                         }
+                    }
+                    .main-nav-sub-nav, .main-nav-third-level-nav {
+                         display: none;
+                         position: absolute;
+                         top: 4.05em;
+                         left: 0;
+                         min-width: 350px;
+                         border: none;
+                         // border-right: 1px solid $govuk-link-colour;
+                         // border-bottom: 1px solid $govuk-link-colour;
+                         // border-left: 1px solid $govuk-link-colour;
+                         background: white;
+                         box-shadow: 0px 10px 10px 0px rgba(black, 0.4);
+                         ul {
+                              display: inline-block;
+                              li {
+                                   width: 100%;
+                                   padding: 0;
+                                   background: white;
+                                   &:hover, &:active, &:focus {
+                                        &.third-level-nav {
+                                             a {
+                                                  background: url('../images/arrow-right-white.svg') $govuk-link-colour no-repeat 96% 50%;
+                                                  background-size: 0.65em;
+                                                  color: white;
+                                             }
+                                             .main-nav-third-level-nav {
+                                                  display: inline-block;
+                                                  left: 350px;
+                                                  top: 0;
+                                                  ul {
+                                                       li {
+                                                            &:hover, &:active, &:focus {
+                                                                 background: $govuk-link-colour;
+                                                                 color: white;
+                                                                 a {
+                                                                      color: white;
+                                                                 }
+                                                            }
+                                                            a {
+                                                                 background: none;
+                                                                 color: $govuk-link-colour;
+                                                            }
+                                                       }
+                                                  }
+                                             }
+                                        }
+                                   }
+                                   &.third-level-nav {
+                                        a {
+                                             background: url('../images/arrow-right-blue.svg') no-repeat 96% 50%;
+                                             background-size: 0.65em;
+                                        }
+                                   }
+                                   &.title {
+                                        h1, h2, h3, h4 {
+                                             margin: 1em 5% 0em 5%;
+                                             text-align: left;
+                                        }
+                                   }
+                                   a {
+                                        padding: 0.65em 5%;
+                                        width: 90%;
+                                        color: $govuk-link-colour;
+                                        text-align: left;
+                                        font-size: 1rem;
+                                        &:hover, &:active, &:focus {
+                                             background: $govuk-link-colour;
+                                             color: white;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}

@@ -205,8 +205,9 @@ ol.app-task-list {
           }
      }
      .icon-basket {
-          background: url('../images/basket-full-white.svg') no-repeat;
-          background-size: cover;
+          background: url('../images/favourite-unchecked-white.svg') no-repeat;
+          // background: url('../images/basket-full-white.svg') no-repeat;
+          background-size: contain;
      }
 }
 
@@ -216,8 +217,9 @@ ol.app-task-list {
      height: 2.5em;
      float: left;
      margin: 0 0.5em 0 0;
-     background: url('../images/basket-full-black.svg') no-repeat;
-     background-size: cover;
+     background: url('../images/favourite-unchecked-black.svg') no-repeat;
+     // background: url('../images/basket-full-black.svg') no-repeat;
+     background-size: contain;
 }
 
 #version-1 {
@@ -391,3 +393,11 @@ ol.app-task-list {
 //      margin: 0 -20em;
 //      padding: 0 -20em;
 // }
+
+.survey-container {
+     display: inline-block;
+     width: 100%;
+     border-top: 1px solid $govuk-border-colour;
+     padding: 3em 0 0 0;
+     margin: 2em 0 0 0;
+}
