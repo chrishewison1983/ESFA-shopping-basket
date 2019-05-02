@@ -124,13 +124,15 @@ $(document).ready(function () {
      }
 
 
-
-
-
-
      // setTimeout(function() {
      //      $.cookie("delete-apprenticeship", false, {path:'/'});
      // }, 5000);
 
+});
+
+$(document).ready(function () {
+
+     if ($.cookie("fat-apprenticeship-title")) { $(".apprenticeship-name").text($.cookie("fat-apprenticeship-title")); }
+     if ($.cookie("fat-training-provider-title")) { $(".provider-name").text($.cookie("fat-training-provider-title")); }
 
 });

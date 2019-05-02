@@ -32,6 +32,11 @@ nav {
                                    color: $govuk-link-colour;
                               }
                          }
+                         a {
+                              background: url('../images/arrow-up-blue.svg') no-repeat;
+                              background-position: right 1em bottom 1.3em;
+                              background-size: 1em;
+                         }
                          .main-nav-sub-nav {
                               display: inline-block;
                          }
@@ -84,6 +89,9 @@ nav {
                                    width: 100%;
                                    padding: 0;
                                    background: white;
+                                   a {
+                                        background: none;
+                                   }
                                    &:hover, &:active, &:focus {
                                         &.third-level-nav {
                                              a {
@@ -137,6 +145,24 @@ nav {
                                         }
                                    }
                               }
+                         }
+                    }
+               }
+          }
+          &.navigation-v2 {
+               ul {
+                    li {
+                         &:last-of-type {
+                              .main-nav-sub-nav, .main-nav-third-level-nav {
+                                   left: inherit;
+                                   right: 0;
+                              }
+                         }
+                         a {
+                              font-size: 1.025rem;
+                         }
+                         .main-nav-sub-nav, .main-nav-third-level-nav {
+                              top: 3.5em;
                          }
                     }
                }

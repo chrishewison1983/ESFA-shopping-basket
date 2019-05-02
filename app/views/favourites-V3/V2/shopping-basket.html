@@ -1,0 +1,179 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     Manage apprenticeships
+{% endblock %}
+
+{% block main %}
+<div class="app-account-header">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         <span class="govuk-caption-xl">Your employer account</span>
+                         Assurance Aerospace Ltd
+                    </h1>
+               </div>
+          </div>
+     </div>
+</div>
+
+<!-- ////////////////////////// COMPARE MESSAGE - START ////////////////////////// -->
+<div id="compare-container">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-m">Your comparison list contains <strong><span class="compare-number">0</span> <span class="comparison-type">comparison type</span></strong></h1>
+               </div>
+               <div class="govuk-grid-column-one-third">
+                    <a href="#" id="view-compare" class="govuk-button">View comparison list</a>
+               </div>
+          </div>
+     </div>
+</div>
+<!-- ////////////////////////// COMPARE MESSAGE - END ////////////////////////// -->
+
+{% block content %}
+<div id="version-2" class="app-account-main">
+
+     <div class="govuk-width-container">
+
+          <div class="hero-container">
+               <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                         <h1 class="govuk-heading-l">
+                              <span class="icon-basket"></span>
+                              Favourite apprenticeships
+                              <span class="govuk-caption-xl bookmarked-numbers">
+                                   <div><span class="apprenticeship-number number">2</span> Apprenticeships</div>
+                              </span>
+                         </h1>
+                    </div>
+               </div>
+          </div>
+
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+
+                    <!-- ================ CONFIRM PANEL - START ================ -->
+                    <div class="success-summary" id="delete-apprenticeship-panel">
+                         <a href="#" class="close-confirmation">close</a>
+                         <h1 class="govuk-heading-l">Removal complete</h1>
+                         <div class="govuk-panel__body">
+                              <strong class="deleted-apprenticeship">HDJ2123F</strong>
+                              <br>has been removed from your favourites
+                         </div>
+                    </div>
+                    <!-- ================ CONFIRM PANEL - END ================ -->
+
+                    <!-- <hr class="no-top-margin"> -->
+
+                    <ol class="app-task-list">
+
+                         <!-- ================ BASKET ITEM - 1 - START ================ -->
+                         <li class="apprenticeship-one">
+                              <h2 class="app-task-list__section">
+                                   <span class="app-task-list__section-number">1. </span> <a href="#" class="chosen-apprenticeship-value">Business Administrator</a>
+                                   <a href="shopping-basket-provider" class="govuk-button chosen-apprenticeship">Choose training provider</a>
+                              </h2>
+
+                              <div class="govuk-grid-row">
+                                   <div class="govuk-grid-column-two-thirds">
+                                        <p class="new"><span>new</span></p>
+                                        <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
+                                        <p><strong>Typical length:</strong> 18 months</p>
+                                        <div class="govuk-form-group">
+                                             <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
+                                                  <div class="govuk-checkboxes">
+                                                       <div class="govuk-checkboxes__item">
+                                                            <input class="govuk-checkboxes__input" id="compare-app-1" name="compare-app" type="checkbox" value="carcasses">
+                                                            <label class="govuk-label govuk-checkboxes__label" for="compare-app-1">
+                                                                 Compare
+                                                            </label>
+                                                       </div>
+                                                       <a href="/favourites-V1/delete-apprenticeship" class="govuk-delete-link delete-apprenticeship" data-delete-item="1">Remove</a>
+                                                  </div>
+                                             </fieldset>
+                                        </div>
+                                   </div>
+                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <h3 class="govuk-heading-s"><span class="text-numbers">saved training providers</span> <span class="provider-number number">5</span></h3>
+                                        <a href="#">Reserve funding</a><br><a href="#">Recruit an apprentice</a>
+                                   </div>
+                              </div>
+                         </li>
+                         <!-- ================ BASKET ITEM - 1 - END ================ -->
+
+                         <!-- ================ BASKET ITEM - 2 - START ================ -->
+                         <li class="apprenticeship-two">
+                              <h2 class="app-task-list__section">
+                                   <span class="app-task-list__section-number">2. </span> <a href="#" class="chosen-apprenticeship-value">Business to business sales professional</a>
+                                   <section class="postcode-search">
+                                        <!-- <h4 class="govuk-heading-s">Enter the postcode of where the apprentice will work...</h4> -->
+                                        <fieldset class="govuk-fieldset">
+                                             <div class="govuk-form-group">
+                                                  <!-- <label class="govuk-label" for="provider-list-postcode">
+                                                       Postcode
+                                                  </label> -->
+                                                  <a id="postcode-search" href="#" class="govuk-button govuk-button--search"><span></span><span class="text">Search</span></a>
+                                                  <input class="govuk-input govuk-input--width-10" id="provider-list-postcode" name="provider-list-postcode" placeholder="Search by postcode..." type="text">
+                                             </div>
+                                        </fieldset>
+                                   </section>
+                              </h2>
+                              <div class="govuk-grid-row">
+                                   <div class="govuk-grid-column-two-thirds">
+                                        <p class="new"><span>new</span></p>
+                                        <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
+                                        <p><strong>Typical length:</strong> 18 months</p>
+                                        <div class="govuk-form-group">
+                                             <fieldset class="govuk-fieldset" aria-describedby="compare-delete-apprenticeship">
+                                                  <div class="govuk-checkboxes">
+                                                       <div class="govuk-checkboxes__item">
+                                                            <input class="govuk-checkboxes__input" id="compare-app-2" name="compare-app" type="checkbox" value="carcasses">
+                                                            <label class="govuk-label govuk-checkboxes__label" for="compare-app-2">
+                                                                 Compare
+                                                            </label>
+                                                       </div>
+                                                       <a href="/favourites-V1/delete-apprenticeship" class="govuk-delete-link delete-apprenticeship" data-delete-item="2">Remove</a>
+                                                  </div>
+                                             </fieldset>
+                                        </div>
+                                   </div>
+                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <h3 class="govuk-heading-s"><span class="text-numbers">saved training providers</span> <span class="provider-number number zero">0</span></h3>
+                                        <a href="#">Reserve funding</a><br><a href="#">Recruit an apprentice</a>
+                                   </div>
+                              </div>
+
+                         </li>
+                         <!-- ================ BASKET ITEM - 2 - END ================ -->
+
+                    </ol>
+
+               </div>
+
+          </div>
+
+     </div>
+
+     <!-- <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+               <hr>
+
+               <div class="cta-component full-width">
+                    <h2 class="govuk-heading-m">Save your choices and create your gov.uk account to start hiring the future</h2>
+                    <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start">Hire an apprentice</a>
+               </div>
+
+          </div>
+
+     </div> -->
+
+</div>
+
+{% endblock %}
+
+{% endblock %}

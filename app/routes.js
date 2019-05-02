@@ -15,6 +15,10 @@ module.exports = {
                var compName = req.params.compName;
                res.render('favourites-V2/' + compName , {id: req.query.id, type: req.query.type})
           })
+          app.get('/favourites-V3/:compName', function (req, res) {
+               var compName = req.params.compName;
+               res.render('favourites-V3/' + compName , {id: req.query.id, type: req.query.type})
+          })
      }
 }
 
