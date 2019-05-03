@@ -350,6 +350,19 @@ ol.app-task-list {
      }
 }
 
+#version-3 {
+     .wrapper-column {
+          display: flex;
+          .app-cta-box {
+               width: 60%;
+               &:nth-of-type(2) {
+                    width: 37.5%;
+                    margin-left: 2.5%;
+               }
+          }
+     }
+}
+
 .govuk-details {
      margin-bottom: 10px;
      .govuk-details__text {
