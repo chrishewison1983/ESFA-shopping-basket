@@ -17,6 +17,11 @@ $govuk-global-styles: true;
 @import "components/navigation";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.version-control {
+     margin-left: 0.75em;
+}
+
 .app-account-header {
      background: white;
      padding: $govuk-gutter 0;
