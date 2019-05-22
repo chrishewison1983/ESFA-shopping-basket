@@ -17,11 +17,35 @@ $govuk-global-styles: true;
 @import "components/navigation";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.version-control {
+     margin-left: 0.75em;
+}
+
 .app-account-header {
      background: white;
      padding: $govuk-gutter 0;
      h1, h2, h3, h4 {
           margin: 0;
+     }
+     a {
+          &.saved-favourites {
+               background: url('../images/favourite-unchecked-black.svg') no-repeat 0% 50%;
+               background-size: contain;
+               padding-left: 2em;
+               margin-top: 0.25em;
+               display: inline-block;
+               font-size: 1.2rem;
+               text-decoration: none;
+               span {
+                    text-decoration: underline;
+               }
+               strong {
+                    color: black;
+                    text-decoration: none;
+                    margin-right: 0.5em;
+               }
+          }
      }
 }
 
@@ -81,14 +105,27 @@ $govuk-global-styles: true;
      }
 }
 
-.govuk-header__container {
-     border-bottom: none;
-     margin-bottom: 0;
+// .govuk-header__container {
+//      border-bottom: none;
+//      margin-bottom: 0;
+// }
+
+
+.govuk-header__content {
+     .govuk-header__link {
+          display: inline-block;
+          float: left;
+     }
+     nav {
+          width: auto;
+          display: inline-block;
+          float: right;
+     }
 }
 
-.govuk-header__link--service-name {
-     display: none;
-}
+// .govuk-header__link--service-name {
+//      display: none;
+// }
 
 nav {
      ul#navigation {

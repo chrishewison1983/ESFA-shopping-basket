@@ -50,15 +50,20 @@ $govuk-global-styles: true;
 }
 
 .app-account-main {
-	padding: 2em 0 4em 0;
+	padding: 1em 0 4em 0;
      background: govuk-colour("grey-4");
+     @include govuk-media-query($from: tablet) {
+          padding: 2em 0 4em 0;
+     }
 }
 
 .app-cta-box {
 	padding: $govuk-gutter;
-	margin-bottom: $govuk-gutter;
+	margin-bottom: 15px;
 	background: white;
-
+     @include govuk-media-query($from: tablet) {
+          margin-bottom: $govuk-gutter;
+     }
 	&.app-cta-box--main {
 		background: govuk-colour("blue");
 		p,a {

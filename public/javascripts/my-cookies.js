@@ -26,17 +26,17 @@ $(document).ready(function () {
           $.cookie("delete-apprenticeship", true, {path:'/'});
      });
      // Stores the apprenticeship name - FOR CHOOSEN
-     $(".chosen-apprenticeship").on("click", function (e) {
-          $.cookie("chosen-apprenticeship", $(this).closest('li').find('.chosen-apprenticeship-value').text(), {path:'/'});
-     });
+     // $(".chosen-apprenticeship").on("click", function (e) {
+     //      $.cookie("chosen-apprenticeship", $(this).parent().find('.chosen-apprenticeship-value').text(), {path:'/'});
+     // });
 
      // Populates the apprenticeship name - FOR CHOOSEN
-     if ($.cookie("chosen-apprenticeship")) {
-          $(".chosen-apprenticeship-name").text($.cookie("chosen-apprenticeship"));
-     }
+     // if ($.cookie("chosen-apprenticeship")) {
+     //      $(".chosen-apprenticeship-name").text($.cookie("chosen-apprenticeship"));
+     // }
 
      // Stores the apprenticeship name - FOR DELETE
-     $(".delete-apprenticeship").on("click", function (e) {
+     $(".delete-chosen-apprenticeship").on("click", function (e) {
           $.cookie("deleted-apprenticeship", $(this).closest('li').find('.chosen-apprenticeship-value').text(), {path:'/'});
           $.cookie("apprenticeship-number", $(this).data('delete-item'), {path:'/'});
      });
@@ -51,24 +51,22 @@ $(document).ready(function () {
           $(".apprenticeship-content.one").css('display', 'inline-block');
      } else if ($.cookie("apprenticeship-number") == 2) {
           $("#provider-number").text('0');
-          $(".apprenticeship-content.two").css('display', 'none');
+          $(".apprenticeship-content.one").css('display', 'none');
      }
 
      if ($.cookie("apprenticeship-number") == 1 && $.cookie("delete-apprenticeship") == 'true') {
-          $("#delete-apprenticeship-panel").show();
-          $("#delete-training-provider-panel").hide();
+          $(".govuk-panel--confirmation").show();
           $("ol.app-task-list li").show();
-          $("ol.app-task-list li.apprenticeship-one").remove();
+          $("ol.app-task-list li.one").remove();
 
           var apprenticeshipNumber = parseInt($('.apprenticeship-number.number').text());
           $('.apprenticeship-number.number').text(apprenticeshipNumber - 1);
      }
 
      if ($.cookie("apprenticeship-number") == 2 && $.cookie("delete-apprenticeship") == 'true') {
-          $("#delete-apprenticeship-panel").show();
-          $("#delete-training-provider-panel").hide();
+          $(".govuk-panel--confirmation").show();
           $("ol.app-task-list li").show();
-          $("ol.app-task-list li.apprenticeship-two").remove();
+          $("ol.app-task-list li.two").remove();
 
           var apprenticeshipNumber = parseInt($('.apprenticeship-number.number').text());
           $('.apprenticeship-number.number').text(apprenticeshipNumber - 1);
@@ -96,31 +94,30 @@ $(document).ready(function () {
      }
 
      if ($.cookie("delete-provider") == 'true') {
-          $("#delete-training-provider-panel").show();
-          $("#delete-apprenticeship-panel").hide();
+          $(".govuk-panel--confirmation").show();
           $("ol.app-task-list li").show();
           var providerNumber = parseInt($('.provider-number.number').text());
           $('.provider-number.number').text(providerNumber - 1);
      }
 
      if ($.cookie("provider-number") == 1 && $.cookie("delete-provider") == 'true') {
-          $("ol.app-task-list li.provider-one").remove();
+          $("ol.app-task-list li.one").remove();
      }
 
      if ($.cookie("provider-number") == 2 && $.cookie("delete-provider") == 'true') {
-          $("ol.app-task-list li.provider-two").remove();
+          $("ol.app-task-list li.two").remove();
      }
 
      if ($.cookie("provider-number") == 3 && $.cookie("delete-provider") == 'true') {
-          $("ol.app-task-list li.provider-three").remove();
+          $("ol.app-task-list li.three").remove();
      }
 
      if ($.cookie("provider-number") == 4 && $.cookie("delete-provider") == 'true') {
-          $("ol.app-task-list li.provider-four").remove();
+          $("ol.app-task-list li.four").remove();
      }
 
      if ($.cookie("provider-number") == 5 && $.cookie("delete-provider") == 'true') {
-          $("ol.app-task-list li.provider-five").remove();
+          $("ol.app-task-list li.five").remove();
      }
 
 
