@@ -370,6 +370,8 @@ ol.app-task-list {
                padding-right: 7.5%;
                @include govuk-media-query($from: tablet) {
                     width: 60%;
+                    padding-left: 30px;
+                    padding-right: 30px;
                }
                &:nth-of-type(2) {
                     width: 85%;
@@ -396,6 +398,8 @@ ol.app-task-list {
                padding-left: 7.5%;
                padding-right: 7.5%;
                @include govuk-media-query($from: tablet) {
+                    padding-left: 1.5em;
+                    padding-right: 1.5em;
                     width: 100%;
                }
                // .app-task-list__section {
