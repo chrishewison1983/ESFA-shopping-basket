@@ -1,0 +1,77 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     Manage apprenticeships
+{% endblock %}
+
+{% block main %}
+<div class="app-account-header">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <a href="javascript: window.history.go(-1)" class="govuk-back-link">Back</a>
+               </div>
+          </div>
+     </div>
+</div>
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+               <form method="post">
+                    <h1 class="govuk-heading-xl">Confirm removal of training provider</h1>
+
+                    <h2 class="govuk-heading-l">
+                         <span class="chosen-provider-name">Grooveholding UK Ltd</span>
+                         <!-- <span class="govuk-caption-l">
+                              Account name: Grooveholding
+                              <br>
+                              Agreement ID: 4A80X560
+                         </span> -->
+                    </h2>
+
+                    <div class="govuk-form-group">
+
+                         <fieldset class="govuk-fieldset">
+
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                   Are you sure you wish to remove this training provider from the apprenticeship?
+                              </legend>
+
+                              <div class="govuk-radios">
+
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="confirm-delete-provider" name="confirm-delete-provider" type="radio" value="delete" required="">
+                                        <label class="govuk-label govuk-radios__label" for="confirm-delete-provider">
+                                             Yes, remove <span class="chosen-provider-name">Grooveholding UK Ltd</span>
+                                        </label>
+                                   </div>
+
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="cancel-delete-provider" name="confirm-delete-provider" type="radio" value="cancel">
+                                        <label class="govuk-label govuk-radios__label" for="cancel-delete-provider">
+                                             No, keep the provider
+                                        </label>
+                                   </div>
+
+                              </div>
+                         </fieldset>
+
+                    </div>
+
+                    <p>
+                         <a href="#" class="govuk-button govuk-button--disabled" id="delete-provider" aria-disabled="true">Save and continue</a>
+                    </p>
+               </form>
+          </div>
+
+     </div>
+
+</div>
+
+{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,212 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+     Manage apprenticeships
+{% endblock %}
+
+{% block main %}
+<div class="compare-wrapper">
+
+     <div class="app-account-header">
+          <div class="govuk-width-container">
+               <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                         <a href="javascript: window.history.go(-1)" class="govuk-back-link">Back</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+</div>
+
+{% block content %}
+<div class="compare-wrapper">
+
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <form method="post" action="version-2">
+                         <h1 class="govuk-heading-xl">
+                              Compare apprenticeships
+                              <span class="govuk-caption-xl bookmarked-numbers">
+                                   <div><span class="number" id="compare-number">2</span> Apprenticeships</div>
+                              </span>
+                         </h1>
+
+                         <ul id="compare-apprenticeships-list">
+
+                              <!-- ///////////////////////// LIST ITEM - 1 - START ///////////////////////// -->
+                              <li class="populated">
+
+                                   <div class="empty">
+                                        <h1 class="govuk-heading-m">Add an apprenticeship to compare</h1>
+                                        <a href="javascript: window.history.go(-1)" class="govuk-button">Open favourites</a>
+                                   </div>
+
+                                   <div class="content">
+                                        <h1 class="govuk-heading-m">Business Administrator</h1>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Level:</p>
+                                             <p>3 (equivalent to A levels at grades A to E)</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Typical length:</p>
+                                             <p>18 months</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Current funding band:</p>
+                                             <p>Up to £5,000 per apprentice</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Entry requirements:</p>
+                                             <details class="govuk-details">
+                                                  <summary class="govuk-details__summary">
+                                                       <span class="govuk-details__summary-text">Show more info</span>
+                                                  </summary>
+                                                  <div class="govuk-details__text">
+                                                       Set by employer
+                                                  </div>
+                                             </details>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">What apprentices will learn:</p>
+                                             <details class="govuk-details">
+                                                  <summary class="govuk-details__summary">
+                                                       <span class="govuk-details__summary-text">Show more info</span>
+                                                  </summary>
+                                                  <div class="govuk-details__text">
+                                                       <ul class="govuk-list">
+                                                            <li>using IT systems to write emails, create proposals and produce spreadsheets</li>
+                                                            <li>maintaining records and files</li>
+                                                            <li>how to build positive working relationships</li>
+                                                            <li>communications skills</li>
+                                                            <li>resource planning</li>
+                                                            <li>project management techniques</li>
+                                                       </ul>
+                                                  </div>
+                                             </details>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Qualifications:</p>
+                                             <details class="govuk-details">
+                                                  <summary class="govuk-details__summary">
+                                                       <span class="govuk-details__summary-text">Show more info</span>
+                                                  </summary>
+                                                  <div class="govuk-details__text">
+                                                       None specified. Before taking their end-point assessment apprentices must achieve level 2 English and maths
+                                                       (equivalent to GCSE grades 9 to 4 or A* to C)to 4 or A* to C)
+                                                  </div>
+                                             </details>
+                                        </div>
+                                   </div>
+                                   <div class="remove-cta"><a href="#" class="remove-item">X Remove</a></div>
+
+                              </li>
+                              <!-- ///////////////////////// LIST ITEM - 1 - EMD ///////////////////////// -->
+
+                              <!-- ///////////////////////// LIST ITEM - 2 - START ///////////////////////// -->
+                              <li class="populated">
+                                   <div class="empty">
+                                        <h1 class="govuk-heading-m">Add an apprenticeship to compare</h1>
+                                        <a href="javascript: window.history.go(-1)" class="govuk-button">Open favourites</a>
+                                   </div>
+
+                                   <div class="content">
+                                        <h1 class="govuk-heading-m">Business to business sales professional</h1>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Level:</p>
+                                             <p>3 (equivalent to A levels at grades A to E)</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Typical length:</p>
+                                             <p>18 months</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Current funding band:</p>
+                                             <p>Up to £2,000 per apprentice</p>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Entry requirements:</p>
+                                             <details class="govuk-details">
+                                                  <summary class="govuk-details__summary">
+                                                       <span class="govuk-details__summary-text">Show more info</span>
+                                                  </summary>
+                                                  <div class="govuk-details__text">
+                                                       Your chosen training provider can advise you about entry requirements for apprentices.
+                                                  </div>
+                                             </details>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">What apprentices will learn:</p>
+                                             <details class="govuk-details">
+                                                  <summary class="govuk-details__summary">
+                                                       <span class="govuk-details__summary-text">Show more info</span>
+                                                  </summary>
+                                                  <div class="govuk-details__text">
+                                                       <ul class="govuk-list">
+                                                            <li>Administrator / Business Support Officer</li>
+                                                            <li>Office Junior</li>
+                                                            <li>Receptionist</li>
+                                                       </ul>
+                                                       <p>Your chosen training provider can advise you about the kinds of skills apprentices will learn.</p>
+                                                  </div>
+                                             </details>
+                                        </div>
+                                        <div class="item-content">
+                                             <p class="lead-paragraph govuk-!-font-weight-bold">Qualifications:</p>
+                                             <details class="govuk-details">
+                                                  <summary class="govuk-details__summary">
+                                                       <span class="govuk-details__summary-text">Show more info</span>
+                                                  </summary>
+                                                  <div class="govuk-details__text">
+                                                       <p>Apprentices will achieve a practical and theory-based (or 'combined') qualification:</p>
+                                                       <ul class="govuk-list">
+                                                            <li>BTEC Diploma in Business Administration</li>
+                                                            <li>Diploma in Business Administration</li>
+                                                            <li>Diploma in Business Administration (RQF)</li>
+                                                       </ul>
+                                                       <p>Your chosen training provider can advise you about the qualifications open to apprentices as they can change depending on individual and other circumstances.</p>
+                                                  </div>
+                                             </details>
+                                        </div>
+                                   </div>
+
+                                   <div class="remove-cta"><a href="#" class="remove-item">X Remove</a></div>
+
+                              </li>
+                              <!-- ///////////////////////// LIST ITEM - 2 - EMD ///////////////////////// -->
+
+                              <!-- ///////////////////////// LIST ITEM - 3 - START ///////////////////////// -->
+                              <li>
+                                   <div class="empty">
+                                        <h1 class="govuk-heading-m">Add an apprenticeship to compare</h1>
+                                        <a href="javascript: window.history.go(-1)" class="govuk-button">Open favourites</a>
+                                   </div>
+                              </li>
+                              <!-- ///////////////////////// LIST ITEM - 3 - EMD ///////////////////////// -->
+
+                              <!-- ///////////////////////// LIST ITEM - 4 - START ///////////////////////// -->
+                              <li>
+                                   <div class="empty">
+                                        <h1 class="govuk-heading-m">Add an apprenticeship to compare</h1>
+                                        <a href="javascript: window.history.go(-1)" class="govuk-button">Open favourites</a>
+                                   </div>
+                              </li>
+                              <!-- ///////////////////////// LIST ITEM - 4 - EMD ///////////////////////// -->
+
+                         </ul>
+
+                    </form>
+               </div>
+
+          </div>
+
+     </div>
+
+</div>
+
+{% endblock %}
+
+{% endblock %}
