@@ -422,6 +422,10 @@ ol.app-task-list {
                .app-task-list__section {
                     font-size: 1.75rem;
                     min-height: auto;
+                    .chosen-apprenticeship-value {
+                         width: 75%;
+                         margin-bottom: 0;
+                    }
                }
                .govuk-details {
                     margin-bottom: 20px;
