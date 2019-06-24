@@ -193,6 +193,19 @@ ol.app-task-list {
      }
 }
 
+#empty-basket {
+     ol.app-task-list {
+          &.empty-basket {
+               li {
+                    background: none;
+                    h2 {
+                         border-bottom: none;
+                    }
+               }
+          }
+     }
+}
+
 .hero-container {
      background: govuk-colour("blue");
      padding: 1.5em;
