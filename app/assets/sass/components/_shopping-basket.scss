@@ -81,6 +81,10 @@ hr {
      }
 }
 
+.govuk-warning-text {
+     margin: -0.5em 0 0.5em 0;
+}
+
 ol.app-task-list {
      li {
           .app-task-list__section {
@@ -491,4 +495,20 @@ ol.app-task-list {
      border-top: 1px solid $govuk-border-colour;
      padding: 3em 0 0 0;
      margin: 2em 0 0 0;
+}
+
+.feedback {
+     display: inline-block;
+     float: none;
+     width: 1.5em;
+     height: 1.5em;
+     margin: 0 1em -0.45em 0.25em;
+     &.yes {
+          background: url('../images/tick.svg') no-repeat;
+          background-size: contain;
+     }
+     &.no {
+          background: url('../images/cross.svg') no-repeat;
+          background-size: contain;
+     }
 }
