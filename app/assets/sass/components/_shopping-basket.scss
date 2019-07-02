@@ -415,9 +415,9 @@ ol.app-task-list {
                padding-left: 7.5%;
                padding-right: 7.5%;
                @include govuk-media-query($from: tablet) {
-                    padding-left: 1.5em;
-                    padding-right: 1.5em;
-                    width: 100%;
+                    padding-left: 2.5%;
+                    padding-right: 2.5%;
+                    width: 95%;
                }
                // .app-task-list__section {
                //      width: 50%;
