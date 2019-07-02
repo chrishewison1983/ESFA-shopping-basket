@@ -429,8 +429,12 @@ ol.app-task-list {
                }
                .govuk-details {
                     margin-bottom: 20px;
+                    display: inline-block;
+                    width: 100%;
                     @include govuk-media-query($from: tablet) {
                          margin-bottom: 0;
+                         display: inline-block;
+                         width: 100%;
                     }
                }
           }
