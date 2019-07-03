@@ -7,19 +7,37 @@ module.exports = {
           app.get('/', function (req, res) {
                res.render('index')
           })
-          app.get('/favourites-V1/:compName', function (req, res) {
+          app.get('/sprint-11/:compName', function (req, res) {
                var compName = req.params.compName;
-               res.render('favourites-V1/' + compName , {id: req.query.id, type: req.query.type})
+               res.render('sprint-11/' + compName , {id: req.query.id, type: req.query.type})
           })
-          app.get('/favourites-V2/:compName', function (req, res) {
+          app.get('/sprint-12/:compName', function (req, res) {
                var compName = req.params.compName;
-               res.render('favourites-V2/' + compName , {id: req.query.id, type: req.query.type})
+               res.render('sprint-12/' + compName , {id: req.query.id, type: req.query.type})
           })
-          app.get('/favourites-V3/:compName', function (req, res) {
+          app.get('/sprint-13/:compName', function (req, res) {
                var compName = req.params.compName;
-               res.render('favourites-V3/' + compName , {id: req.query.id, type: req.query.type})
+               res.render('sprint-13/' + compName , {id: req.query.id, type: req.query.type})
+          })
+          app.get('/sprint-14/:compName', function (req, res) {
+               var compName = req.params.compName;
+               res.render('sprint-14/' + compName , {id: req.query.id, type: req.query.type})
+          })
+          app.get('/sprint-15/:compName', function (req, res) {
+               var compName = req.params.compName;
+               res.render('sprint-15/' + compName , {id: req.query.id, type: req.query.type})
+          })
+          app.get('/sprint-17/:compName', function (req, res) {
+               var compName = req.params.compName;
+               res.render('sprint-17/' + compName , {id: req.query.id, type: req.query.type})
           })
      }
 }
 
 module.exports = router
+
+
+// Employer started
+router.get('/directEmployer', function (req, res) {
+     res.redirect(`/sprint-17/V4/shopping-basket`)
+})
