@@ -29,6 +29,9 @@ $(document).ready(function () {
           // if (checkedApprenticeships) {
           //      // $('#compare-message-panel .comparison-item-title').append('<span>' + itemApprenticeshipTitle +'</span>');
           // }
+
+          $('#view-compare').attr('href', '/favourites-V1/compare-apprenticeships');
+
           if (countCheckedApprenticeship() === 0) {
                $('.training-provider-content').css('opacity', '1');
                $('input[name="compare-provider"]').removeAttr("disabled");
@@ -62,6 +65,8 @@ $(document).ready(function () {
 
      $('input[name="compare-provider"]').on('change',function(e) {
           // var checkedTrainingProvider = $(this).is(':checked');
+
+          $('#view-compare').attr('href', '/favourites-V1/compare-providers');
 
           if (countCheckedTrainingProvider() === 0) {
                $('input[name="compare-app"]').removeAttr("disabled");
@@ -101,5 +106,11 @@ $(document).ready(function () {
           $('#delete-apprenticeship').removeClass('govuk-button--disabled');
      });
 
-
 });
+
+$(document).ready(function () {
+     $('.close-confirmation').on('click',function(e) {
+          e.preventDefault();
+          $(this).parent().remove();
+     });
+})

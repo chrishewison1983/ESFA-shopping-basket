@@ -81,6 +81,10 @@ hr {
      }
 }
 
+.govuk-warning-text {
+     margin: -0.5em 0 0.5em 0;
+}
+
 ol.app-task-list {
      li {
           .app-task-list__section {
@@ -183,6 +187,19 @@ ol.app-task-list {
                                    display: none;
                               }
                          }
+                    }
+               }
+          }
+     }
+}
+
+#empty-basket {
+     ol.app-task-list {
+          &.empty-basket {
+               li {
+                    background: none;
+                    h2 {
+                         border-bottom: none;
                     }
                }
           }
@@ -398,9 +415,9 @@ ol.app-task-list {
                padding-left: 7.5%;
                padding-right: 7.5%;
                @include govuk-media-query($from: tablet) {
-                    padding-left: 1.5em;
-                    padding-right: 1.5em;
-                    width: 100%;
+                    padding-left: 2.5%;
+                    padding-right: 2.5%;
+                    width: 95%;
                }
                // .app-task-list__section {
                //      width: 50%;
@@ -433,8 +450,6 @@ ol.app-task-list {
                     width: 100%;
                     @include govuk-media-query($from: tablet) {
                          margin-bottom: 0;
-                         display: inline-block;
-                         width: 100%;
                     }
                }
           }
@@ -495,4 +510,20 @@ ol.app-task-list {
      border-top: 1px solid $govuk-border-colour;
      padding: 3em 0 0 0;
      margin: 2em 0 0 0;
+}
+
+.feedback {
+     display: inline-block;
+     float: none;
+     width: 1.5em;
+     height: 1.5em;
+     margin: 0 1em -0.45em 0.25em;
+     &.yes {
+          background: url('../images/tick.svg') no-repeat;
+          background-size: contain;
+     }
+     &.no {
+          background: url('../images/cross.svg') no-repeat;
+          background-size: contain;
+     }
 }
