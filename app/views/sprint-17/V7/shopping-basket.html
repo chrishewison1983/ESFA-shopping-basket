@@ -64,7 +64,7 @@
                     <span class="govuk-caption-xl">Your saved favourites</span>
                     <h1 class="govuk-heading-xl">
                          <span class="icon-basket"></span>
-                         Training provider
+                         Apprenticeship
                     </h1>
                </div>
           </div>
@@ -79,38 +79,33 @@
           <div class="govuk-grid-row">
                <div class="govuk-grid-column-full">
 
-                    <ol class="app-task-list training-provider">
+
+                    <ol class="app-task-list">
 
                          <!-- ================ BASKET ITEM - 1 - START ================ -->
-                         <li class="provider-one">
+                         <li class="apprenticeship-one">
+                              <h2 class="app-task-list__section">
+                                   <span class="number">1</span>
+                                   <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/{{ data['standard-id'] }}" class="chosen-apprenticeship-value">{{ data['standard-title'] }}</a>
+                                   <a href="shopping-basket-provider" class="govuk-button chosen-apprenticeship">View training provider</a>
+                              </h2>
+
                               <div class="govuk-grid-row">
                                    <div class="govuk-grid-column-two-thirds">
-                                        <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Provider/{{ data['provider-id'] }}" class="app-task-list__section chosen-training-provider-value">{{ data['provider-name'] }}</a>
-                                        <p><strong>Phone:</strong> 0800 7832 545</p>
-                                        <p><strong>Email:</strong> <a href="enquiries@pgon.co.uk">enquiries@pgon.co.uk</a></p>
-                                        <details class="govuk-details">
-                                             <summary class="govuk-details__summary">
-                                                  <span class="govuk-details__summary-text">
-                                                       Training provider details
-                                                  </span>
-                                             </summary>
-                                             <div class="govuk-details__text">
-                                                  <p><strong>Website:</strong> <a href="http://www.woodspeen.co.uk">http://www.woodspeen.co.uk</a></p>
-                                                  <!-- <p>
-                                                       <span class="distance"><strong>Distance:</strong> 1.1 miles away</span>
-                                                       <span class="locations"><strong>3</strong> locations</span>
-                                                  </p> -->
-                                                  <!-- <p class="training-options"><strong>Training options:</strong> day release <span class="feedback no"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p> -->
-                                                  <p><strong>Employer satisfaction:</strong> 86%</p>
-                                                  <p><strong>Learner satisfaction:</strong> 0</p>
-                                                  <!--<p><strong>Achievement rate:</strong> 65%</p> -->
-                                             </div>
-                                        </details>
+                                        <div class="govuk-warning-text">
+                                             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                                             <strong class="govuk-warning-text__text">
+                                                  <span class="govuk-warning-text__assistive">Warning</span>
+                                                  This apprenticeship is closed to new starters from 1 August 2020
+                                             </strong>
+                                        </div>
+                                        <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
+                                        <p><strong>Typical length:</strong> 18 months</p>
                                    </div>
-
                                    <div class="govuk-grid-column-one-third training-provider-content">
-                                        <a href="#" class="govuk-button chosen-provider">Reserve funding</a>
-                                        <a href="#">Manage permissions</a>
+                                        <a href="#">Reserve funding</a>
+                                        <br>
+                                        <a href="https://das-recruit-prototype.herokuapp.com/raa-v2/0-1-11/RVDB-37-saved-apprentice/create/title?return=saved&edit=no&journey=new&user=employer">Create a vacancy</a>
                                    </div>
                               </div>
                          </li>
