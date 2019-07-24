@@ -5,10 +5,60 @@
      Manage apprenticeships
 {% endblock %}
 
+
+{% if (data['framework']['name'] | is_string) %}
+{% set apprenticeshipsCount = 1 %}
+{% else %}
+{% set apprenticeshipsCount = data['framework']['name'] | length %}
+{% endif %}
+
+
+{% if (data['framework']['name'] | is_string) %}
+    <li>{{ data['framework']['name'] }}
+    <p>
+         <b>ID: {{ data['framework']['id'] }}</b>,
+         <b>Level: </b>{{ data['framework']['level'] }},
+         <b>Length: </b>{{ data['framework']['length'] }} months
+     </p>
+
+    </li>
+{% else %}
+    {% for framework in data['framework']['name'] %}
+
+      <li>
+        {{ framework }} ( {{ data['framework']['id'][loop.index0] }} )
+        <p>
+             <b>ID: {{ data['framework']['id'][loop.index0] }}</b>,
+             <b>Level: </b>{{ data['framework']['level'][loop.index0] }},
+             <b>Length: </b>{{ data['framework']['length'][loop.index0] }} months
+         </p>
+        <ul>
+                {% if (data['provider'][ data['framework']['id'][loop.index0] ]['name'] | is_string) %}
+
+                    <li>{{ data['provider'][ data['framework']['id'][loop.index0] ]['name'] }}</li>
+
+                {% else %}
+
+                    {% set frameworkId = data['framework']['id'][loop.index0] %}
+
+                    {% for provider in data['provider'][frameworkId]['name']  %}
+                        <li>{{ provider }} (  {{data['provider'][frameworkId]['id'][loop.index0]}}  )</li>
+                    {% endfor %}
+
+                {% endif %}
+
+        </ul>
+      </li>
+
+    {% endfor %}
+{% endif %}
+</ul>
+
+
+
 {% block header %}
 <header class="govuk-header " role="banner" data-module="header">
      <div class="govuk-header__container govuk-width-container">
-
           <div class="govuk-header__logo">
                <a href="/" class="govuk-header__link govuk-header__link--homepage">
                     <span class="govuk-header__logotype">
@@ -56,13 +106,15 @@
 {% endblock %}
 
 {% block main %}
+
+
 <div class="app-account-header">
      <div class="govuk-width-container">
           <div class="govuk-grid-row">
                <div class="govuk-grid-column-full">
                     <span class="govuk-caption-l govuk-!-margin-bottom-0">Your employer account</span>
                     <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">A-Business Ltd</h1>
-                    <a href="shopping-basket" class="saved-favourites"><strong>(1)</strong><span>View saved favourites</span></a>
+                    <a href="shopping-basket" class="saved-favourites"><strong>({{ apprenticeshipsCount }})</strong><span>View saved favourites</span></a>
                </div>
           </div>
      </div>

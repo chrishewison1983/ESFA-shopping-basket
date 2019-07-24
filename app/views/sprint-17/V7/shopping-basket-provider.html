@@ -79,7 +79,25 @@
           <div class="govuk-grid-row">
                <div class="govuk-grid-column-full">
 
+
+               {% set frameworkId = data['id'] %}
+
                     <ol class="app-task-list training-provider">
+
+
+                        {% if (data['provider'][frameworkId]['name'] | is_string) %}
+
+                            <li>{{ data['provider'][frameworkId]['name'] }}</li>
+
+                        {% else %}
+
+
+                            {% for provider in data['provider'][frameworkId]['name']  %}
+                                <li>{{ provider }} (  {{data['provider'][frameworkId]['id'][loop.index0]}}  )</li>
+                            {% endfor %}
+
+                        {% endif %}
+
 
                          <!-- ================ BASKET ITEM - 1 - START ================ -->
                          <li class="provider-one">
