@@ -124,6 +124,7 @@ ol.app-task-list {
                a {
                     width: auto;
                     float: left;
+                    text-transform: lowercase;
                }
                // margin-bottom: 0;
                .govuk-button {
@@ -170,7 +171,7 @@ ol.app-task-list {
                float: left;
                clear: none;
                font-weight: normal;
-               font-size: 19px;
+               font-size: 16px;
           }
           .govuk-checkboxes__item {
                min-height: 30px;
