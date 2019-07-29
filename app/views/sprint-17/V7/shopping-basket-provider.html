@@ -88,14 +88,15 @@
                               <li class="provider-one">
                                    <h2 class="app-task-list__section">
                                         <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Provider/{{ data['provider-id'] }}" class="app-task-list__section chosen-training-provider-value">
-                                             {{ data['provider'][frameworkId]['name'] }}
+                                             <!-- {{ data['provider'][frameworkId]['name'] }} -->
+                                             {{ provider }}
                                         </a>
                                         <a href="#" class="govuk-button chosen-provider">Reserve funding</a>
                                    </h2>
                                    <div class="govuk-grid-row">
                                         <div class="govuk-grid-column-two-thirds">
                                              <p><strong>Phone:</strong> 0800 7832 545</p>
-                                             <p><strong>Email:</strong> <a href="enquiries@pgon.co.uk">enquiries@pgon.co.uk</a></p>
+                                             <p><strong>Email:</strong> <a href="enquiries@pgon.co.uk">enquiries@{{ provider }}.co.uk</a></p>
                                              <details class="govuk-details">
                                                   <summary class="govuk-details__summary">
                                                        <span class="govuk-details__summary-text">
@@ -103,9 +104,9 @@
                                                        </span>
                                                   </summary>
                                                   <div class="govuk-details__text">
-                                                       <p><strong>Website:</strong> <a href="#">http://www.woodspeen.co.uk</a></p>
+                                                       <p><strong>Website:</strong> <a href="#">http://www.{{ provider }}.co.uk</a></p>
                                                        <p><strong>Employer satisfaction:</strong> 86%</p>
-                                                       <p><strong>Learner satisfaction:</strong> 0</p>
+                                                       <p><strong>Learner satisfaction:</strong> 72%</p>
                                                   </div>
                                              </details>
                                         </div>
@@ -120,14 +121,15 @@
                          <li class="provider-one">
                               <h2 class="app-task-list__section">
                                    <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Provider/{{ data['provider-id'] }}" class="app-task-list__section chosen-training-provider-value">
-                                        {{ provider }} (  {{data['provider'][frameworkId][loop.index0]}}  )
+                                        <!-- {{ provider }} (  {{data['provider'][frameworkId]['id'][loop.index0]}}  ) -->
+                                        {{ provider }}
                                    </a>
                                    <a href="#" class="govuk-button chosen-provider">Reserve funding</a>
                               </h2>
                               <div class="govuk-grid-row">
                                    <div class="govuk-grid-column-two-thirds">
                                         <p><strong>Phone:</strong> 0800 7832 545</p>
-                                        <p><strong>Email:</strong> <a href="enquiries@pgon.co.uk">enquiries@pgon.co.uk</a></p>
+                                        <p><strong>Email:</strong> <a href="enquiries@pgon.co.uk">enquiries@{{ provider }}.co.uk</a></p>
                                         <details class="govuk-details">
                                              <summary class="govuk-details__summary">
                                                   <span class="govuk-details__summary-text">
@@ -135,9 +137,9 @@
                                                   </span>
                                              </summary>
                                              <div class="govuk-details__text">
-                                                  <p><strong>Website:</strong> <a href="#">http://www.woodspeen.co.uk</a></p>
+                                                  <p><strong>Website:</strong> <a href="#">http://www.{{ provider }}.co.uk</a></p>
                                                   <p><strong>Employer satisfaction:</strong> 86%</p>
-                                                  <p><strong>Learner satisfaction:</strong> 0</p>
+                                                  <p><strong>Learner satisfaction:</strong> 72%</p>
                                              </div>
                                         </details>
                                    </div>
