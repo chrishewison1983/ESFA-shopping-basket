@@ -88,11 +88,18 @@ $govuk-global-styles: true;
 }
 
 .success-summary {
-     display: none;
+     // display: none;
      padding: 1.5em;
-     border: 10px solid govuk-colour("turquoise");
+     border: 5px solid govuk-colour("turquoise");
      position: relative;
      background: white;
+     margin: 0 0 2em 0;
+     .govuk-heading-l {
+          margin-bottom: 0.25em;
+     }
+     p {
+          margin-bottom: 0;
+     }
      .close-confirmation {
           position: absolute;
           top: 1em;

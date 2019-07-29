@@ -100,7 +100,7 @@
                          {% if (data['provider'][frameworkId]['name'] | is_string) %}
                               {% set hasProviders = true %}
                               {% set providerCount = 1 %}
-                         {% else
+                         {% else %}
                               {% if (data['provider'][frameworkId]['name'] | length > 1) %}
                                    {% set hasProviders = true %}
                                    {% set providerCount = data['provider'][frameworkId]['name'] | length %}
@@ -113,7 +113,14 @@
                                    {% if (hasProviders) %}
                                    <a href="shopping-basket-provider?id={{ data['framework']['id'] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
                                    {% else %}
-                                   rethrththrthrtherth
+                                   <section class="postcode-search">
+                                        <fieldset class="govuk-fieldset">
+                                             <div class="govuk-form-group">
+                                                  <a id="postcode-search" href="https://fire-it-up-v14.herokuapp.com/campaign/FAT/4A-FAT-training-provider-results?id=196" class="govuk-button govuk-button--search"><span></span><span class="text">Search</span></a>
+                                                  <input class="govuk-input govuk-input--width-10" id="provider-list-postcode" name="provider-list-postcode" placeholder="Search by postcode..." type="text">
+                                             </div>
+                                        </fieldset>
+                                   </section>
                                    {% endif %}
                               </h2>
                               <div class="govuk-grid-row">
@@ -123,7 +130,7 @@
                                         <p><strong>Typical length:</strong> {{ data['framework']['length'] }} months</p>
                                    </div>
                                    <div class="govuk-grid-column-one-third training-provider-content">
-                                        {{ providerCount }} saved training providers
+                                        <h3 class="govuk-heading-s"><span class="text-numbers">saved training providers</span> <span class="provider-number number">{{ providerCount }}</span></h3>
                                         <a href="#">Reserve funding</a>
                                         <br>
                                         <a href="https://das-recruit-prototype.herokuapp.com/raa-v2/0-1-11/RVDB-37-saved-apprentice/create/title?return=saved&edit=no&journey=new&user=employer">Create a vacancy</a>
@@ -141,7 +148,7 @@
                               {% if (data['provider'][frameworkId]['name'] | is_string) %}
                                    {% set hasProviders = true %}
                                    {% set providerCount = 1 %}
-                              {% else
+                              {% else %}
                                    {% if (data['provider'][frameworkId]['name'] | length > 1) %}
                                         {% set hasProviders = true %}
                                         {% set providerCount = data['provider'][frameworkId]['name'] | length %}
@@ -155,7 +162,14 @@
                                    {% if (hasProviders) %}
                                    <a href="shopping-basket-provider?id={{ data['framework']['id'][loop.index0] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
                                    {% else %}
-                                   Show form
+                                   <section class="postcode-search">
+                                        <fieldset class="govuk-fieldset">
+                                             <div class="govuk-form-group">
+                                                  <a id="postcode-search" href="https://fire-it-up-v14.herokuapp.com/campaign/FAT/4A-FAT-training-provider-results?id=196" class="govuk-button govuk-button--search"><span></span><span class="text">Search</span></a>
+                                                  <input class="govuk-input govuk-input--width-10" id="provider-list-postcode" name="provider-list-postcode" placeholder="Search by postcode..." type="text">
+                                             </div>
+                                        </fieldset>
+                                   </section>
                                    {% endif %}
                               </h2>
                               <div class="govuk-grid-row">
@@ -165,7 +179,7 @@
                                         <p><strong>Typical length:</strong> {{ data['framework']['length'][loop.index0] }} months</p>
                                    </div>
                                    <div class="govuk-grid-column-one-third training-provider-content">
-                                        {{ providerCount }} saved training providers
+                                        <h3 class="govuk-heading-s"><span class="text-numbers">saved training providers</span> <span class="provider-number number">{{ providerCount }}</span></h3>
                                         <a href="#">Reserve funding</a>
                                         <br>
                                         <a href="https://das-recruit-prototype.herokuapp.com/raa-v2/0-1-11/RVDB-37-saved-apprentice/create/title?return=saved&edit=no&journey=new&user=employer">Create a vacancy</a>

@@ -11,8 +11,9 @@
 }
 
 .app-task-list__section {
-  display: table;
-  @include govuk-font($size:24, $weight: bold);
+     display: table;
+     @include govuk-font($size:24, $weight: bold);
+     margin: 0 0 1em 0;
 }
 
 .app-task-list__section-number {

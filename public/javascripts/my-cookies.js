@@ -9,11 +9,11 @@ $(document).ready(function () {
      });
 
      if ($.cookie("journey-verion") === 'verison-1') {
-          $('#delete-apprenticeship').attr('href', '/favourites-V1/V1/shopping-basket');
-          $('#delete-provider').attr('href', '/favourites-V1/V1/shopping-basket');
+          $('#delete-apprenticeship').attr('href', '/sprint-17/V7/shopping-basket');
+          $('#delete-provider').attr('href', '/sprint-17/V7/shopping-basket');
      } else if ($.cookie("journey-verion") === 'verison-2') {
-          $('#delete-apprenticeship').attr('href', '/favourites-V1/V2/shopping-basket');
-          $('#delete-provider').attr('href', '/favourites-V1/V2/shopping-basket-provider');
+          $('#delete-apprenticeship').attr('href', '/sprint-17/V7/shopping-basket');
+          $('#delete-provider').attr('href', '/sprint-17/V7/shopping-basket-provider');
      }
 
 });
