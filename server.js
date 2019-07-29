@@ -102,6 +102,10 @@ nunjucksConfig.express = app
 
 var nunjucksAppEnv = nunjucks.configure(appViews, nunjucksConfig)
 
+nunjucksAppEnv.addFilter('is_string', function(obj) {
+  return typeof obj === 'string';
+});
+
 // Add Nunjucks filters
 utils.addNunjucksFilters(nunjucksAppEnv)
 
