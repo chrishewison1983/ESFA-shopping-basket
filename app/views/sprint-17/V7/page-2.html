@@ -110,43 +110,33 @@
 {% block content %}
 <div class="govuk-width-container">
      <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-               <a href="index" class="govuk-back-link">Back</a>
+
+          <div class="govuk-grid-column-two-thirds">
                <p><br></p>
-               <form method="post" action="page-2">
-                    <h1 class="govuk-heading-xl">Set up as a user</h1>
-                    <p>If you already have an account <a href="signin">sign in</a></p>
-                    <div class="govuk-form-group">
-                         <div class="govuk-form-group">
-                              <label class="govuk-label" for="providerRegisterFirstName">First name</label>
-                              <input class="govuk-input" id="providerRegisterFirstName" name="providerRegisterFirstName" type="text">
-                         </div>
-                         <div class="govuk-form-group">
-                              <label class="govuk-label" for="providerRegisterLastName">Last name</label>
-                              <input class="govuk-input" id="providerRegisterLastName" name="providerRegisterLastName" type="text">
-                         </div>
-                         <div class="govuk-form-group">
-                              <label class="govuk-label" for="providerRegisterEmail">Email</label>
-                              <span id="email-hint" class="govuk-hint">We'll send you an email to confirm your identity.</span>
-                              <input class="govuk-input" id="providerRegisterEmail" name="providerRegisterEmail" type="providerRegisterEmail">
-                         </div>
-                         <div class="govuk-form-group">
-                              <label class="govuk-label" for="password">Create a password</label>
-                              <span id="password-hint" class="govuk-hint">Password requires upper and lowercase letters, a number and at least 8 characters.</span>
-                              <input class="govuk-input" id="password" name="password" type="password">
-                         </div>
-                         <div class="govuk-form-group">
-                              <label class="govuk-label bold-label govuk-!-width-three-quarters" for="confirmPassword">Confirm password</label>
-                              <input class="govuk-input" id="confirmPassword" name="confirmPassword" type="password">
-                         </div>
-                         <div class="govuk-inset-text">
-                              By continuing you accept the <a href="terms" target="blank" class="govuk-link--no-visited-state">terms and conditions</a>
-                         </div>
+               <p><br></p>
+               <form method="post" action="page-3">
+                    <div class="success-summary">
+                         <h1 class="govuk-heading-l">We've sent you an email</h1>
+                         <p class="govuk-body">To confirm your email address, we've sent a code to <strong>{{ data['providerRegisterEmail'] }}</strong></p>
                     </div>
-                    <button type="submit" class="govuk-button">Set me up</button>
+
+                    <div class="govuk-form-group">
+                         <fieldset class="govuk-fieldset">
+                              <div class="govuk-form-group">
+                                   <label class="govuk-label" for="code">Enter the code</label>
+                                   <input class="govuk-input  govuk-input--width-10" id="code" name="code" type="text" aria-describedby="First Name">
+                              </div>
+                         </fieldset>
+                    </div>
+                    <button type="submit" class="govuk-button">Continue</button>
+
+                    <h2 class="govuk-heading-m govuk-!-margin-top-4">Not received the email?</h2>
+                    <p><a href="#" class="govuk-link--no-visited-state">You can request another email</a></p>
                </form>
                <p><br></p>
+
           </div>
+
      </div>
 
 </div>

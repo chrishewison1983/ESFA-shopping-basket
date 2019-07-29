@@ -110,43 +110,76 @@
 {% block content %}
 <div class="govuk-width-container">
      <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-               <a href="index" class="govuk-back-link">Back</a>
+
+          <div class="govuk-grid-column-two-thirds">
                <p><br></p>
-               <form method="post" action="page-2">
-                    <h1 class="govuk-heading-xl">Set up as a user</h1>
-                    <p>If you already have an account <a href="signin">sign in</a></p>
+
+               <form method="post" action="account-homepage">
+
+                    <h1 class="govuk-heading-xl">Get apprenticeship funding</h1>
+                    <p class="govuk-body">
+                         If you're ready to pay for your apprenticeship training, you can do this now by adding the
+                         PAYE scheme for your organisation.
+                    </p>
+                    <p>
+                         If you don't need to get apprenticeship funding yet, you can still register an account to:
+                    </p>
+                    <ul class="govuk-list govuk-list--bullet">
+                         <li>search and save apprenticeships</li>
+                         <li>save your chosen training providers</li>
+                    </ul>
+                    <p class="govuk-body">To get apprenticeship funding now, you can use either of the following:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                         <li>the Government Gateway login for your PAYE scheme</li>
+                         <li>your accounts office reference number and employer PAYE scheme reference</li>
+                    </ul>
+                    <p>
+                         <a href="https://www.gov.uk/log-in-register-hmrc-online-services/problems-signing-in" target="blank">Can't find your Government Gateway details?</a>
+                    </p>
+
+                    <details class="govuk-details" role="group">
+                         <summary class="govuk-details__summary" role="button" aria-controls="details-content-17643193-f49b-4eeb-9ab9-17631c4c3fab" aria-expanded="false">
+                              <span class="govuk-details__summary-text">Find your accounts office and PAYE scheme reference numbers</span>
+                         </summary>
+                         <div class="govuk-details__text" id="details-content-17643193-f49b-4eeb-9ab9-17631c4c3fab" aria-hidden="true">
+                              <p>
+                                   You can find your 13-character accounts office reference number on the letter HMRC sent you when you first
+                                   registered as an employer.
+                              </p>
+                              <p>
+                                   You will find your employer PAYE scheme reference in the payslip booklet HMRC provided. Contact HMRC or
+                                   your accountant if you do not have access to the booklet.
+                              </p>
+                         </div>
+                    </details>
+
+                    <p><br></p>
+
                     <div class="govuk-form-group">
-                         <div class="govuk-form-group">
-                              <label class="govuk-label" for="providerRegisterFirstName">First name</label>
-                              <input class="govuk-input" id="providerRegisterFirstName" name="providerRegisterFirstName" type="text">
-                         </div>
-                         <div class="govuk-form-group">
-                              <label class="govuk-label" for="providerRegisterLastName">Last name</label>
-                              <input class="govuk-input" id="providerRegisterLastName" name="providerRegisterLastName" type="text">
-                         </div>
-                         <div class="govuk-form-group">
-                              <label class="govuk-label" for="providerRegisterEmail">Email</label>
-                              <span id="email-hint" class="govuk-hint">We'll send you an email to confirm your identity.</span>
-                              <input class="govuk-input" id="providerRegisterEmail" name="providerRegisterEmail" type="providerRegisterEmail">
-                         </div>
-                         <div class="govuk-form-group">
-                              <label class="govuk-label" for="password">Create a password</label>
-                              <span id="password-hint" class="govuk-hint">Password requires upper and lowercase letters, a number and at least 8 characters.</span>
-                              <input class="govuk-input" id="password" name="password" type="password">
-                         </div>
-                         <div class="govuk-form-group">
-                              <label class="govuk-label bold-label govuk-!-width-three-quarters" for="confirmPassword">Confirm password</label>
-                              <input class="govuk-input" id="confirmPassword" name="confirmPassword" type="password">
-                         </div>
-                         <div class="govuk-inset-text">
-                              By continuing you accept the <a href="terms" target="blank" class="govuk-link--no-visited-state">terms and conditions</a>
-                         </div>
+
+                         <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                   <h1 class="govuk-fieldset__heading">Do you want to add a PAYE scheme to get apprenticeship funding?</h1>
+                              </legend>
+                              <div class="govuk-radios">
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="add-your-paye-1" name="add-your-paye" type="radio" value="yes">
+                                        <label class="govuk-label govuk-radios__label" for="add-your-paye-1">Yes, add my PAYE scheme details now</label>
+                                   </div>
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="add-your-paye-2" name="add-your-paye" type="radio" value="no">
+                                        <label class="govuk-label govuk-radios__label" for="add-your-paye-2" checked>No, I'll do this later</label>
+                                   </div>
+                              </div>
+                         </fieldset>
                     </div>
-                    <button type="submit" class="govuk-button">Set me up</button>
+
+                    <button type="submit" class="govuk-button">Continue</button>
+
                </form>
                <p><br></p>
           </div>
+
      </div>
 
 </div>
