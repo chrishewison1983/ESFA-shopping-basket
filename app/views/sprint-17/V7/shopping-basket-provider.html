@@ -64,7 +64,9 @@
                     <span class="govuk-caption-xl">Your saved favourites</span>
                     <h1 class="govuk-heading-xl">
                          <span class="icon-basket"></span>
+                         {% set frameworkId = data['id'] %}
                          <strong>({{ data['provider'][frameworkId]['name'] | length }})</strong> Training providers
+
                     </h1>
                </div>
           </div>
@@ -112,7 +114,7 @@
                                         </div>
                                         <div class="govuk-grid-column-one-third training-provider-content">
                                              <a href="#">Manage permissions</a>
-                                             <a href="/sprint-17/delete-apprenticeship" class="govuk-delete-link delete-apprenticeship" data-delete-item="1">Remove</a>
+                                             <a href="/sprint-17/delete-provider" class="govuk-delete-link delete-training-provider" data-provider-id="1">Remove</a>
                                         </div>
                                    </div>
                               </li>
@@ -146,7 +148,7 @@
                                         </div>
                                         <div class="govuk-grid-column-one-third training-provider-content">
                                              <a href="#">Manage permissions</a>
-                                             <a href="/sprint-17/delete-apprenticeship" class="govuk-delete-link delete-apprenticeship" data-delete-item="1">Remove</a>
+                                             <a href="/sprint-17/delete-provider" class="govuk-delete-link delete-training-provider" data-provider-id="1">Remove</a>
                                         </div>
                                    </div>
                               </li>
