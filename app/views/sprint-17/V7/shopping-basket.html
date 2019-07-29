@@ -73,7 +73,7 @@
                     <span class="govuk-caption-xl">Your saved favourites</span>
                     <h1 class="govuk-heading-xl">
                          <span class="icon-basket"></span>
-                         Apprenticeship
+                         <strong>({{ apprenticeshipsCount }})</strong> Apprenticeships
                     </h1>
                </div>
           </div>
@@ -88,45 +88,45 @@
           <div class="govuk-grid-row">
                <div class="govuk-grid-column-full">
 
+                    <h2 class="app-task-list__section">
+                         Congratulations – you’ve successfully created an account. As requested, we’ve shared your details with your favourite
+                         training providers and asked them to get in touch with you. In the meantime, you can view your saved favourites below.
+                    </h2>
 
                     <ol class="app-task-list">
 
+                         {% if (data['framework']['name'] | is_string) %}
+                         <li class="apprenticeship-one">
+                              <h2 class="app-task-list__section">{{ data['framework']['name'] }} </h2>
+                              <p>
+                                   <b>ID: {{ data['framework']['id'] }}</b>,
+                                   <b>Level: </b>{{ data['framework']['level'] }},
+                                   <b>Length: </b>{{ data['framework']['length'] }} months
+                              </p>
+                              <a href="shopping-basket-provider?id={{ data['framework']['id'] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
 
+                         </li>
+                         {% else %}
 
-                    {% if (data['framework']['name'] | is_string) %}
-                        <li class="apprenticeship-one">
-                            <h2 class="app-task-list__section">{{ data['framework']['name'] }} </h2>
-                            <p>
-                                 <b>ID: {{ data['framework']['id'] }}</b>,
-                                 <b>Level: </b>{{ data['framework']['level'] }},
-                                 <b>Length: </b>{{ data['framework']['length'] }} months
-                             </p>
-                             <a href="shopping-basket-provider?id={{ data['framework']['id'] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
+                         {% for framework in data['framework']['name'] %}
+                         <li class="apprenticeship-one">
+                              <h2 class="app-task-list__section">{{ framework }}</h2>
+                              <p>
+                                   <b>ID: {{ data['framework']['id'][loop.index0] }}</b>,
+                                   <b>Level: </b>{{ data['framework']['level'][loop.index0] }},
+                                   <b>Length: </b>{{ data['framework']['length'][loop.index0] }} months
+                              </p>
+                              <a href="shopping-basket-provider?id={{ data['framework']['id'][loop.index0] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
+                         </li>
+                         {% endfor %}
 
-                        </li>
-                    {% else %}
-                        {% for framework in data['framework']['name'] %}
-
-                          <li class="apprenticeship-one">
-                            <h2 class="app-task-list__section">{{ framework }}</h2>
-
-                            <p>
-                                 <b>ID: {{ data['framework']['id'][loop.index0] }}</b>,
-                                 <b>Level: </b>{{ data['framework']['level'][loop.index0] }},
-                                 <b>Length: </b>{{ data['framework']['length'][loop.index0] }} months
-                             </p>
-                             <a href="shopping-basket-provider?id={{ data['framework']['id'][loop.index0] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
-
-                          </li>
-
-                        {% endfor %}
-                    {% endif %}
+                         {% endif %}
 
 
 
 
                          <!-- ================ BASKET ITEM - 1 - START ================ -->
-                         <li class="apprenticeship-one">
+                         <!-- <li class="apprenticeship-one">
                               <h2 class="app-task-list__section">
                                    <span class="number">1</span>
                                    <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/{{ data['standard-id'] }}" class="chosen-apprenticeship-value">{{ data['standard-title'] }}</a>
@@ -151,7 +151,7 @@
                                         <a href="https://das-recruit-prototype.herokuapp.com/raa-v2/0-1-11/RVDB-37-saved-apprentice/create/title?return=saved&edit=no&journey=new&user=employer">Create a vacancy</a>
                                    </div>
                               </div>
-                         </li>
+                         </li> -->
                          <!-- ================ BASKET ITEM - 1 - END ================ -->
 
                     </ol>
