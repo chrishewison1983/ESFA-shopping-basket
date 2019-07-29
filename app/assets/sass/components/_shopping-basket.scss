@@ -121,6 +121,10 @@ ol.app-task-list {
                border-bottom: 1px solid $govuk-border-colour;
                padding-bottom: 0.5em;
                font-size: 1.7rem;
+               a {
+                    width: auto;
+                    float: left;
+               }
                // margin-bottom: 0;
                .govuk-button {
                     float: right;
