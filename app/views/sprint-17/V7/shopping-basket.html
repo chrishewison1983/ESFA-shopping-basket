@@ -96,7 +96,7 @@
                     <ol class="app-task-list">
 
                          {% if (data['framework']['name'] | is_string) %}
-                         <li class="apprenticeship-one">
+                         <li class="apprenticeship">
                               <h2 class="app-task-list__section">
                                    <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/{{ data['standard-id'] }}" class="chosen-apprenticeship-value">{{ data['framework']['name'] }}</a>
                                    <a href="shopping-basket-provider?id={{ data['framework']['id'] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
@@ -105,7 +105,7 @@
                                    <div class="govuk-grid-column-two-thirds">
                                         <p><strong>ID:</strong> {{ data['framework']['id'] }}</p>
                                         <p><strong>Level:</strong> {{ data['framework']['level'] }}</p>
-                                        <p><strong>Length:</strong> {{ data['framework']['length'] }} months</p>
+                                        <p><strong>Typical length:</strong> {{ data['framework']['length'] }} months</p>
                                    </div>
                                    <div class="govuk-grid-column-one-third training-provider-content">
                                         <a href="#">Reserve funding</a>
@@ -117,7 +117,7 @@
                          {% else %}
 
                          {% for framework in data['framework']['name'] %}
-                         <li class="apprenticeship-one">
+                         <li class="apprenticeship">
                               <h2 class="app-task-list__section">
                                    <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/{{ data['standard-id'] }}" class="chosen-apprenticeship-value">{{ framework }}</a>
                                    <a href="shopping-basket-provider?id={{ data['framework']['id'][loop.index0] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
@@ -126,7 +126,7 @@
                                    <div class="govuk-grid-column-two-thirds">
                                         <p><strong>ID:</strong> {{ data['framework']['id'][loop.index0] }}</p>
                                         <p><strong>Level:</strong> {{ data['framework']['level'][loop.index0] }}</p>
-                                        <p><strong>Length:</strong> {{ data['framework']['length'][loop.index0] }} months</p>
+                                        <p><strong>Typical length:</strong> {{ data['framework']['length'][loop.index0] }} months</p>
                                    </div>
                                    <div class="govuk-grid-column-one-third training-provider-content">
                                         <a href="#">Reserve funding</a>
@@ -139,14 +139,12 @@
 
                          {% endif %}
 
-
-
-
                          <!-- ================ BASKET ITEM - 1 - START ================ -->
-                         <!-- <li class="apprenticeship-one">
+                         <!-- <li class="apprenticeship">
                               <h2 class="app-task-list__section">
-                                   <span class="number">1</span>
-                                   <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/{{ data['standard-id'] }}" class="chosen-apprenticeship-value">{{ data['standard-title'] }}</a>
+                                   <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/{{ data['standard-id'] }}" class="chosen-apprenticeship-value">
+                                        Business and Professional Administration: Business and Professional Administration
+                                   </a>
                                    <a href="shopping-basket-provider" class="govuk-button chosen-apprenticeship">View training provider</a>
                               </h2>
 

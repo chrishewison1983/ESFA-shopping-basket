@@ -87,6 +87,35 @@ hr {
 
 ol.app-task-list {
      li {
+          &:nth-of-type(1) { h2 { &:before { content: '1'; } } }
+          &:nth-of-type(2) { h2 { &:before { content: '2'; } } }
+          &:nth-of-type(3) { h2 { &:before { content: '3'; } } }
+          &:nth-of-type(4) { h2 { &:before { content: '4'; } } }
+          &:nth-of-type(5) { h2 { &:before { content: '5'; } } }
+          &:nth-of-type(6) { h2 { &:before { content: '6'; } } }
+          &:nth-of-type(7) { h2 { &:before { content: '7'; } } }
+          &:nth-of-type(8) { h2 { &:before { content: '8'; } } }
+          &:nth-of-type(9) { h2 { &:before { content: '9'; } } }
+          &:nth-of-type(10) { h2 { &:before { content: '10'; } } }
+          h2 {
+               &:before {
+                    content: ' ';
+                    color: govuk-colour("blue");
+                    background: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $govuk-brand-colour;
+                    color: white;
+                    font-weight: bold;
+                    border-radius: 50%;
+                    width: 2em;
+                    height: 2em;
+                    font-size: 1.2rem;
+                    margin: -0.25em 0.75em 0 0;
+                    float: left;
+               }
+          }
           .app-task-list__section {
                width: 100%;
                border-bottom: 1px solid $govuk-border-colour;
@@ -160,8 +189,6 @@ ol.app-task-list {
                left: 6px;
                width: 14px;
                height: 7px;
-
-
           }
           .postcode-search {
                background: govuk-colour("grey-3");
