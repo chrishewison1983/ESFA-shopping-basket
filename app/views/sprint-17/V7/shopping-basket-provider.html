@@ -84,11 +84,11 @@
 
                     <ol class="app-task-list training-provider">
 
-                         {% if (data['provider']['name'] | is_string) %}
+                         {% if (data['provider'][frameworkId]['name'] | is_string) %}
                               <li class="provider-one">
                                    <h2 class="app-task-list__section">
                                         <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Provider/{{ data['provider-id'] }}" class="app-task-list__section chosen-training-provider-value">
-                                             {{ data['provider']['name'] }}
+                                             {{ data['provider'][frameworkId]['name'] }}
                                         </a>
                                         <a href="#" class="govuk-button chosen-provider">Reserve funding</a>
                                    </h2>
@@ -116,11 +116,11 @@
                               </li>
                          {% else %}
 
-                         {% for provider in data['provider']['name']  %}
+                         {% for provider in data['provider'][frameworkId]['name']  %}
                          <li class="provider-one">
                               <h2 class="app-task-list__section">
                                    <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Provider/{{ data['provider-id'] }}" class="app-task-list__section chosen-training-provider-value">
-                                        {{ provider }} (  {{data['provider']['id'][loop.index0]}}  )
+                                        {{ provider }} (  {{data['provider'][frameworkId][loop.index0]}}  )
                                    </a>
                                    <a href="#" class="govuk-button chosen-provider">Reserve funding</a>
                               </h2>
