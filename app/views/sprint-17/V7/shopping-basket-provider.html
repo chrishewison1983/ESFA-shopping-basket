@@ -64,7 +64,7 @@
                     <span class="govuk-caption-xl">Your saved favourites</span>
                     <h1 class="govuk-heading-xl">
                          <span class="icon-basket"></span>
-                         Training provider
+                         Training providers
                     </h1>
                </div>
           </div>
@@ -84,23 +84,76 @@
 
                     <ol class="app-task-list training-provider">
 
+                         {% if (data['provider'][frameworkId]['name'] | is_string) %}
+                              <li class="provider-one">
+                                   <div class="govuk-grid-row">
+                                        <div class="govuk-grid-column-two-thirds">
+                                             <h2 class="app-task-list__section">
+                                                  <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Provider/{{ data['provider-id'] }}" class="app-task-list__section chosen-training-provider-value">
+                                                       {{ data['provider'][frameworkId]['name'] }}
+                                                  </a>
+                                             </h2>
+                                             <p><strong>Phone:</strong> 0800 7832 545</p>
+                                             <p><strong>Email:</strong> <a href="enquiries@pgon.co.uk">enquiries@pgon.co.uk</a></p>
+                                             <details class="govuk-details">
+                                                  <summary class="govuk-details__summary">
+                                                       <span class="govuk-details__summary-text">
+                                                            Training provider details
+                                                       </span>
+                                                  </summary>
+                                                  <div class="govuk-details__text">
+                                                       <p><strong>Website:</strong> <a href="http://www.woodspeen.co.uk">http://www.woodspeen.co.uk</a></p>
+                                                       <p><strong>Employer satisfaction:</strong> 86%</p>
+                                                       <p><strong>Learner satisfaction:</strong> 0</p>
+                                                  </div>
+                                             </details>
+                                        </div>
 
-                        {% if (data['provider'][frameworkId]['name'] | is_string) %}
+                                        <div class="govuk-grid-column-one-third training-provider-content">
+                                             <a href="#" class="govuk-button chosen-provider">Reserve funding</a>
+                                             <a href="#">Manage permissions</a>
+                                        </div>
+                                   </div>
+                              </li>
+                         {% else %}
 
-                            <li>{{ data['provider'][frameworkId]['name'] }}</li>
+                         {% for provider in data['provider'][frameworkId]['name']  %}
+                         <li class="provider-one">
+                              <div class="govuk-grid-row">
+                                   <div class="govuk-grid-column-two-thirds">
+                                        <h2 class="app-task-list__section">
+                                             <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Provider/{{ data['provider-id'] }}" class="app-task-list__section chosen-training-provider-value">
+                                                  {{ provider }} (  {{data['provider'][frameworkId]['id'][loop.index0]}}  )
+                                             </a>
+                                        </h2>
+                                        <p><strong>Phone:</strong> 0800 7832 545</p>
+                                        <p><strong>Email:</strong> <a href="enquiries@pgon.co.uk">enquiries@pgon.co.uk</a></p>
+                                        <details class="govuk-details">
+                                             <summary class="govuk-details__summary">
+                                                  <span class="govuk-details__summary-text">
+                                                       Training provider details
+                                                  </span>
+                                             </summary>
+                                             <div class="govuk-details__text">
+                                                  <p><strong>Website:</strong> <a href="http://www.woodspeen.co.uk">http://www.woodspeen.co.uk</a></p>
+                                                  <p><strong>Employer satisfaction:</strong> 86%</p>
+                                                  <p><strong>Learner satisfaction:</strong> 0</p>
+                                             </div>
+                                        </details>
+                                   </div>
 
-                        {% else %}
-
-
-                            {% for provider in data['provider'][frameworkId]['name']  %}
-                                <li>{{ provider }} (  {{data['provider'][frameworkId]['id'][loop.index0]}}  )</li>
-                            {% endfor %}
-
-                        {% endif %}
+                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <a href="#" class="govuk-button chosen-provider">Reserve funding</a>
+                                        <a href="#">Manage permissions</a>
+                                   </div>
+                              </div>
+                         </li>
+                         {% endfor %}
+                         {% endif %}
 
 
                          <!-- ================ BASKET ITEM - 1 - START ================ -->
-                         <li class="provider-one">
+                         <!-- <li class="provider-one">
                               <div class="govuk-grid-row">
                                    <div class="govuk-grid-column-two-thirds">
                                         <h2 class="app-task-list__section">
@@ -117,14 +170,8 @@
                                              </summary>
                                              <div class="govuk-details__text">
                                                   <p><strong>Website:</strong> <a href="http://www.woodspeen.co.uk">http://www.woodspeen.co.uk</a></p>
-                                                  <!-- <p>
-                                                       <span class="distance"><strong>Distance:</strong> 1.1 miles away</span>
-                                                       <span class="locations"><strong>3</strong> locations</span>
-                                                  </p> -->
-                                                  <!-- <p class="training-options"><strong>Training options:</strong> day release <span class="feedback no"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p> -->
                                                   <p><strong>Employer satisfaction:</strong> 86%</p>
                                                   <p><strong>Learner satisfaction:</strong> 0</p>
-                                                  <!--<p><strong>Achievement rate:</strong> 65%</p> -->
                                              </div>
                                         </details>
                                    </div>
@@ -134,7 +181,7 @@
                                         <a href="#">Manage permissions</a>
                                    </div>
                               </div>
-                         </li>
+                         </li> -->
                          <!-- ================ BASKET ITEM - 1 - END ================ -->
 
                     </ol>
