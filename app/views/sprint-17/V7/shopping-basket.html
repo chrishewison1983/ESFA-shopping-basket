@@ -97,26 +97,43 @@
 
                          {% if (data['framework']['name'] | is_string) %}
                          <li class="apprenticeship-one">
-                              <h2 class="app-task-list__section">{{ data['framework']['name'] }} </h2>
-                              <p>
-                                   <b>ID: {{ data['framework']['id'] }}</b>,
-                                   <b>Level: </b>{{ data['framework']['level'] }},
-                                   <b>Length: </b>{{ data['framework']['length'] }} months
-                              </p>
-                              <a href="shopping-basket-provider?id={{ data['framework']['id'] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
-
+                              <h2 class="app-task-list__section">
+                                   <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/{{ data['standard-id'] }}" class="chosen-apprenticeship-value">{{ data['framework']['name'] }}</a>
+                                   <a href="shopping-basket-provider?id={{ data['framework']['id'] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
+                              </h2>
+                              <div class="govuk-grid-row">
+                                   <div class="govuk-grid-column-two-thirds">
+                                        <p><strong>ID:</strong> {{ data['framework']['id'] }}</p>
+                                        <p><strong>Level:</strong> {{ data['framework']['level'] }}</p>
+                                        <p><strong>Length:</strong> {{ data['framework']['length'] }} months</p>
+                                   </div>
+                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <a href="#">Reserve funding</a>
+                                        <br>
+                                        <a href="https://das-recruit-prototype.herokuapp.com/raa-v2/0-1-11/RVDB-37-saved-apprentice/create/title?return=saved&edit=no&journey=new&user=employer">Create a vacancy</a>
+                                   </div>
+                              </div>
                          </li>
                          {% else %}
 
                          {% for framework in data['framework']['name'] %}
                          <li class="apprenticeship-one">
-                              <h2 class="app-task-list__section">{{ framework }}</h2>
-                              <p>
-                                   <b>ID: {{ data['framework']['id'][loop.index0] }}</b>,
-                                   <b>Level: </b>{{ data['framework']['level'][loop.index0] }},
-                                   <b>Length: </b>{{ data['framework']['length'][loop.index0] }} months
-                              </p>
-                              <a href="shopping-basket-provider?id={{ data['framework']['id'][loop.index0] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
+                              <h2 class="app-task-list__section">
+                                   <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/{{ data['standard-id'] }}" class="chosen-apprenticeship-value">{{ framework }}</a>
+                                   <a href="shopping-basket-provider?id={{ data['framework']['id'][loop.index0] }}" class="govuk-button chosen-apprenticeship">View training provider</a>
+                              </h2>
+                              <div class="govuk-grid-row">
+                                   <div class="govuk-grid-column-two-thirds">
+                                        <p><strong>ID:</strong> {{ data['framework']['id'][loop.index0] }}</p>
+                                        <p><strong>Level:</strong> {{ data['framework']['level'][loop.index0] }}</p>
+                                        <p><strong>Length:</strong> {{ data['framework']['length'][loop.index0] }} months</p>
+                                   </div>
+                                   <div class="govuk-grid-column-one-third training-provider-content">
+                                        <a href="#">Reserve funding</a>
+                                        <br>
+                                        <a href="https://das-recruit-prototype.herokuapp.com/raa-v2/0-1-11/RVDB-37-saved-apprentice/create/title?return=saved&edit=no&journey=new&user=employer">Create a vacancy</a>
+                                   </div>
+                              </div>
                          </li>
                          {% endfor %}
 
