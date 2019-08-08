@@ -86,6 +86,15 @@ hr {
 }
 
 ol.app-task-list {
+     &.empty-basket {
+          li {
+               h2 {
+                    &:before {
+                         display: none;
+                    }
+               }
+          }
+     }
      li {
           &:nth-of-type(1) { h2 { &:before { content: '1'; } } }
           &:nth-of-type(2) { h2 { &:before { content: '2'; } } }
