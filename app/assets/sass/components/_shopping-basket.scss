@@ -506,6 +506,23 @@ ol.app-task-list {
      }
      .govuk-details__text {
           display: inline-block;
+          &.provider-details {
+               width: 95%;
+          }
+     }
+     .govuk-details__summary-text {
+          strong {
+               float: left;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               background:  $govuk-link-colour;
+               color: white;
+               width: 1.5em;
+               height: 1.5em;
+               margin: -0.1em 0.5em 0 0;
+               border-radius: 50%;
+          }
      }
 }
 
