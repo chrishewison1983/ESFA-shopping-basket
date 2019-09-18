@@ -449,6 +449,16 @@ ol.app-task-list {
 }
 
 #version-5 {
+     &.static-version {
+          .app-task-list__section {
+               width: 75%;
+               float: left;
+          }
+          .training-provider-content {
+               width: 25%;
+               float: right;
+          }
+     }
      ol.app-task-list, ol.app-task-list.training-provider {
           li {
                width: 85%;
