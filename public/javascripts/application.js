@@ -113,4 +113,10 @@ $(document).ready(function () {
           e.preventDefault();
           $(this).parent().remove();
      });
+
+     ///// CONFIRM - LOCATION
+     $('input[name="confirm-account"]').on('change',function(e) {
+          $('#comfirm-account').removeClass('govuk-button--disabled');
+     });
+
 })
