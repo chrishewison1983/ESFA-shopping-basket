@@ -79,13 +79,28 @@
           <div class="govuk-grid-row">
                <div class="govuk-grid-column-full">
 
+                    <!-- ////////// WARNING - START ////////// -->
+                    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                         <h2 class="govuk-error-summary__title" id="error-summary-title">
+                              One of your favourites has been removed
+                         </h2>
+                         <div class="govuk-error-summary__body">
+                              <ul class="govuk-list govuk-error-summary__list">
+                                   <li>
+                                        <a href="#removed">An apprenticeship has been removed from your favourites as it’s no longer available.</a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+                    <!-- ////////// WARNING - END ////////// -->
+
                     <ol class="app-task-list">
 
                          <!-- ================ BASKET ITEM - 1 - START ================ -->
                          <li class="apprenticeship-one">
                               <h2 class="app-task-list__section">
                                    <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/196?keyword=business%20administrator" class="">Business Administrator</a>
-                                   <a href="shopping-basket-provider" class="govuk-button chosen-apprenticeship">View training providers</a>
+                                   <a href="shopping-basket-provider-error" class="govuk-button chosen-apprenticeship">View training providers</a>
                               </h2>
 
                               <div class="govuk-grid-row">
@@ -116,7 +131,7 @@
                          <li class="apprenticeship-one">
                               <h2 class="app-task-list__section">
                                    <a href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/Apprenticeship/Standard/196?keyword=business%20administrator" class="">Baker</a>
-                                   <a href="shopping-basket-provider" class="govuk-button chosen-apprenticeship">Recruit Apprentice</a>
+                                   <a href="shopping-basket-provider-error" class="govuk-button chosen-apprenticeship">Recruit Apprentice</a>
                               </h2>
 
                               <div class="govuk-grid-row">
@@ -142,6 +157,15 @@
                               </div>
                          </li>
                          <!-- ================ BASKET ITEM - 2 - END ================ -->
+
+                         <!-- ================ BASKET ITEM - 3 - START ================ -->
+                         <li id="removed" class="apprenticeship-one">
+                              <h2 class="app-task-list__section">
+                                   <a class="">Apprenticeship no longer available</a>
+                              </h2>
+                         </li>
+                         <!-- ================ BASKET ITEM - 3 - END ================ -->
+
 
 
                     </ol>
