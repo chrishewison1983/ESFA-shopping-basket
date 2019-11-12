@@ -199,3 +199,13 @@ nav {
           }
      }
 }
+
+#removed {
+     background: #dee0e2 !important;
+     .app-task-list__section {
+          padding-bottom: 0;
+          .delete-training-provider {
+               float: right;
+          }
+     }
+}
