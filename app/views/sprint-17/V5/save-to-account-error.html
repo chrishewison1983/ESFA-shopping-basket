@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     Manage apprenticeships
+{% endblock %}
+
+{% block main %}
+<div class="app-account-header">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <a href="javascript: window.history.go(-1)" class="govuk-back-link">Back</a>
+               </div>
+          </div>
+     </div>
+</div>
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+               <form method="post">
+                    <span class="govuk-caption-l">Multiple accounts</span>
+                    <h1 class="govuk-heading-xl">Please choose an account</h1>
+
+                    <p>
+                         You have multiple accounts. To continue, please choose the account you’d like to save your favourites to.
+                    </p>
+
+                    <div class="govuk-form-group govuk-form-group--error">
+
+                         <fieldset class="govuk-fieldset">
+
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                   Which account would you like to use?
+                              </legend>
+
+                              <span id="passport-issued-error" class="govuk-error-message">
+                                   <span class="govuk-visually-hidden">Error:</span> Please choose an account to continue
+                              </span>
+
+                              <div class="govuk-radios">
+
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="location-one" name="confirm-account" type="radio" value="delete" required="">
+                                        <label class="govuk-label govuk-radios__label" for="location-one">
+                                             Grooveholding UK Ltd
+                                        </label>
+                                   </div>
+
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="location-two" name="confirm-account" type="radio" value="cancel">
+                                        <label class="govuk-label govuk-radios__label" for="location-two">
+                                             Grooveholding London Ltd
+                                        </label>
+                                   </div>
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="location-three" name="confirm-account" type="radio" value="cancel">
+                                        <label class="govuk-label govuk-radios__label" for="location-three">
+                                             Grooveholding Coventry Ltd
+                                        </label>
+                                   </div>
+
+
+                              </div>
+                         </fieldset>
+
+                    </div>
+
+                    <p>
+                         <a href="#" class="govuk-button" id="comfirm-account">Save and continue</a>
+                    </p>
+               </form>
+          </div>
+
+     </div>
+
+</div>
+
+{% endblock %}
+
+{% endblock %}
